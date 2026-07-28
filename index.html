@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vasavi High School | Nachupally, Jagtial | Telangana SSC, IIT-NEET & Navodaya Coaching</title>
-    <meta name="description" content="Vasavi High School, Nachupally, Jagtial - 35+ years of academic excellence under Correspondent Bodla Satish. Telangana SSC State & District top rankers, IIT & NEET Foundation, and specialized Navodaya & Sainik School Coaching.">
+    <title>Vasavi High School | Nachupally, Jagtial | 3 Campuses: Primary, State Board & A/C IIT-JEE Campus</title>
+    <meta name="description" content="Vasavi High School, Nachupally, Jagtial - 35+ years of educational excellence under Correspondent Bodla Satish. 3 Specialized Campuses: Primary Campus, State Board High School Campus, and Premier A/C IIT-JEE & NEET Academy Campus.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -40,25 +40,16 @@
                             400: '#2dd4bf',
                             500: '#00A896',
                             600: '#008577'
+                        },
+                        cyan: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2'
                         }
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
                         sans: ['Plus Jakarta Sans', 'sans-serif']
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-8px)' }
-                        },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: 0.8, transform: 'scale(1)' },
-                            '50%': { opacity: 1, transform: 'scale(1.03)' }
-                        }
-                    },
-                    animation: {
-                        float: 'float 5s ease-in-out infinite',
-                        pulseGlow: 'pulseGlow 3s ease-in-out infinite'
                     }
                 }
             }
@@ -73,7 +64,7 @@
         }
 
         .glass-header {
-            background: rgba(11, 25, 44, 0.92);
+            background: rgba(11, 25, 44, 0.94);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
@@ -85,13 +76,19 @@
         }
 
         .glass-dark {
-            background: rgba(11, 25, 44, 0.85);
+            background: rgba(11, 25, 44, 0.88);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(212, 175, 55, 0.25);
         }
 
         .text-gradient-gold {
             background: linear-gradient(135deg, #FFF0B3 0%, #D4AF37 50%, #9E7D19 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-cyan {
+            background: linear-gradient(135deg, #E0F2FE 0%, #38BDF8 50%, #0284C7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -113,20 +110,20 @@
 </head>
 <body class="antialiased selection:bg-gold-500 selection:text-navy-900 custom-scrollbar">
 
-    <!-- Announcement Bar -->
+    <!-- Top Announcement Bar -->
     <div id="announcement-bar" class="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 text-white text-xs md:text-sm py-2 px-4 border-b border-gold-500/20 relative z-50">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-3 overflow-hidden w-full sm:w-auto">
-                <span class="bg-gold-500 text-navy-950 font-bold px-2 py-0.5 rounded text-xs uppercase tracking-wider shrink-0 flex items-center gap-1">
-                    <i class="fa-solid fa-trophy text-[10px]"></i> Success Record
+                <span class="bg-gold-500 text-navy-950 font-extrabold px-2 py-0.5 rounded text-[11px] uppercase tracking-wider shrink-0 flex items-center gap-1">
+                    <i class="fa-solid fa-building-columns"></i> 3 Dedicated Campuses
                 </span>
-                <div class="truncate text-slate-200">
-                    <span class="font-medium text-gold-400">Navodaya 2025 Result:</span> 2 Navodaya seats secured out of 10 applied students! | SSC State & District Top 3 Rankers.
+                <div class="truncate text-slate-200 text-xs">
+                    <span class="font-bold text-gold-400">Admissions Open 2026-27:</span> 1,200+ Students • 60+ Experienced Staff • 5 Bus Transport Fleet • 3 Campuses in Nachupally
                 </div>
             </div>
             <div class="flex items-center gap-4 text-xs text-slate-300 shrink-0">
-                <a href="#admissions-section" class="hover:text-gold-400 transition-colors underline underline-offset-2 flex items-center gap-1 font-semibold">
-                    Admissions Open 2026-27 <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <a href="#campuses" class="hover:text-gold-400 transition-colors underline underline-offset-2 flex items-center gap-1 font-semibold">
+                    Explore Campuses <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </a>
                 <button onclick="document.getElementById('announcement-bar').remove()" class="text-slate-400 hover:text-white transition-colors" title="Dismiss Notice">
                     <i class="fa-solid fa-xmark"></i>
@@ -151,7 +148,6 @@
                 </a>
             </div>
             <div class="flex items-center gap-4">
-                <!-- Social & Accessibility Tools -->
                 <a href="https://www.instagram.com/vasavi_high_school_nachupally?igsh=MTQzNDdvbHVlbnI4bA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-pink-400 transition-colors flex items-center gap-1.5 pr-2 border-r border-slate-800">
                     <i class="fa-brands fa-instagram text-pink-400"></i> Instagram Page
                 </a>
@@ -161,11 +157,9 @@
                     <button onclick="resetFontSize()" class="hover:text-white px-1 font-bold" title="Reset Font">A</button>
                     <button onclick="changeFontSize(1)" class="hover:text-white px-1 font-bold" title="Increase Font">A+</button>
                 </div>
-                <div class="flex items-center gap-3">
-                    <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors font-medium flex items-center gap-1">
-                        <i class="fa-solid fa-map-location-dot text-gold-500"></i> Google Maps Location
-                    </a>
-                </div>
+                <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition-colors font-medium flex items-center gap-1">
+                    <i class="fa-solid fa-map-location-dot text-gold-500"></i> Directions
+                </a>
             </div>
         </div>
     </div>
@@ -175,7 +169,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 
-                <!-- Brand Crest & Title -->
+                <!-- Brand Logo & Title -->
                 <a href="#" class="flex items-center gap-3 group">
                     <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-400 via-gold-500 to-amber-700 p-0.5 shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform">
                         <div class="w-full h-full bg-navy-950 rounded-[10px] flex items-center justify-center">
@@ -186,59 +180,57 @@
                         <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide text-white group-hover:text-gold-400 transition-colors">
                             VASAVI <span class="text-gold-400">HIGH SCHOOL</span>
                         </span>
-                        <span class="text-[10px] uppercase tracking-[0.18em] text-slate-300 font-semibold">Nachupally, Jagtial • 35+ Years Legacy</span>
+                        <span class="text-[10px] uppercase tracking-[0.16em] text-slate-300 font-semibold">Nachupally, Jagtial • 3 Dedicated Campuses</span>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Menu -->
+                <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center gap-1">
                     <a href="#home" class="text-white hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5">Home</a>
                     
-                    <!-- About Dropdown -->
+                    <!-- Campuses Dropdown -->
                     <div class="relative group">
-                        <button class="text-slate-200 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5 flex items-center gap-1">
-                            About Us <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                        <button class="text-gold-400 hover:text-gold-300 px-3 py-2 text-sm font-bold transition-colors rounded-lg hover:bg-white/5 flex items-center gap-1">
+                            Our 3 Campuses <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div class="absolute top-full left-0 w-64 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <div class="bg-navy-900 border border-slate-800 rounded-xl shadow-2xl p-2 space-y-1 backdrop-blur-xl">
-                                <a href="#leadership" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">Correspondent Bodla Satish</a>
-                                <a href="#achievements" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">SSC & Navodaya Rankers</a>
-                                <a href="#stats" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">35+ Years Educational Excellence</a>
-                                <a href="#faculty" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">60+ Expert Faculty</a>
+                        <div class="absolute top-full left-0 w-80 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div class="bg-navy-900 border border-slate-800 rounded-xl shadow-2xl p-2 space-y-1">
+                                <a href="#campus-jee" class="block px-3 py-2 text-sm text-cyan-400 hover:bg-white/5 rounded-lg font-bold transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-snowflake text-cyan-400"></i> A/C IIT-JEE & NEET Campus
+                                </a>
+                                <a href="#campus-state" class="block px-3 py-2 text-sm text-gold-400 hover:bg-white/5 rounded-lg font-semibold transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-award text-gold-400"></i> State Board High School Campus
+                                </a>
+                                <a href="#campus-primary" class="block px-3 py-2 text-sm text-teal-400 hover:bg-white/5 rounded-lg font-semibold transition-colors flex items-center gap-2">
+                                    <i class="fa-solid fa-child text-teal-400"></i> Primary Section Campus (Nursery - 5th)
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Special Programs Dropdown -->
+                    <!-- Programs Dropdown -->
                     <div class="relative group">
-                        <button class="text-gold-400 hover:text-gold-300 px-3 py-2 text-sm font-semibold transition-colors rounded-lg hover:bg-white/5 flex items-center gap-1">
-                            Academic Wings <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                        <button class="text-slate-200 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5 flex items-center gap-1">
+                            Academics <i class="fa-solid fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
                         </button>
-                        <div class="absolute top-full left-0 w-80 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="absolute top-full left-0 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                             <div class="bg-navy-900 border border-slate-800 rounded-xl shadow-2xl p-2 space-y-1">
-                                <a href="#special-coaching" class="block px-3 py-2 text-sm text-gold-400 hover:bg-white/5 rounded-lg font-semibold transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-microscope text-gold-400"></i> IIT-JEE & NEET Foundation (Grades 6-10)
-                                </a>
-                                <a href="#special-coaching" class="block px-3 py-2 text-sm text-teal-400 hover:bg-white/5 rounded-lg font-semibold transition-colors flex items-center gap-2">
-                                    <i class="fa-solid fa-shield-halved text-teal-400"></i> Navodaya & Sainik Prep (Grades 5-6)
-                                </a>
-                                <div class="border-t border-slate-800 my-1"></div>
-                                <a href="#wings" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">Pre-Primary (Nursery - UKG)</a>
-                                <a href="#wings" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">Primary Wing (Classes 1 - 5)</a>
-                                <a href="#wings" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">High School SSC (Classes 6 - 10)</a>
+                                <a href="#special-coaching" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">Integrated IIT/NEET Foundation</a>
+                                <a href="#special-coaching" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">Navodaya & Sainik Entrance Wing</a>
+                                <a href="#achievements" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">Telangana SSC State Board Prep</a>
+                                <a href="#leadership" class="block px-3 py-2 text-sm text-slate-300 hover:text-gold-400 hover:bg-white/5 rounded-lg transition-colors">Correspondent Bodla Satish (35+ Yrs)</a>
                             </div>
                         </div>
                     </div>
 
                     <a href="#achievements" class="text-slate-200 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5">Achievements</a>
                     <a href="#admissions-section" class="text-slate-200 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5">Admissions</a>
-                    <a href="#campus-life" class="text-slate-200 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5">Campus</a>
                     <a href="#contact" class="text-slate-200 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5">Contact</a>
                 </nav>
 
-                <!-- Action Buttons -->
+                <!-- Header Actions -->
                 <div class="hidden sm:flex items-center gap-3">
-                    <button onclick="toggleSearchModal()" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-gold-400 flex items-center justify-center transition-all" title="Search Website">
+                    <button onclick="toggleSearchModal()" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-gold-400 flex items-center justify-center transition-all" title="Search Site">
                         <i class="fa-solid fa-magnifying-glass text-sm"></i>
                     </button>
                     
@@ -254,7 +246,7 @@
                     </button>
                 </div>
 
-                <!-- Mobile Hamburger Toggle -->
+                <!-- Mobile Hamburger Button -->
                 <button onclick="toggleMobileDrawer()" class="lg:hidden w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-white flex items-center justify-center hover:bg-white/10 transition-colors">
                     <i id="mobile-menu-icon" class="fa-solid fa-bars text-lg"></i>
                 </button>
@@ -262,7 +254,7 @@
         </div>
     </header>
 
-    <!-- Mobile Drawer -->
+    <!-- Mobile Navigation Drawer -->
     <div id="mobile-drawer" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
         <div id="mobile-drawer-content" class="fixed right-0 top-0 bottom-0 w-4/5 max-w-sm bg-navy-900 border-l border-slate-800 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-out shadow-2xl overflow-y-auto">
             <div>
@@ -278,18 +270,29 @@
 
                 <div class="space-y-3 font-medium text-slate-200">
                     <a href="#home" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg text-gold-400 font-semibold">Home</a>
-                    <a href="#leadership" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">Correspondent Bodla Satish</a>
-                    <a href="#achievements" onclick="toggleMobileDrawer()" class="block px-3 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-400 rounded-lg font-bold">State Ranks & Navodaya Results</a>
-                    <a href="#special-coaching" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">IIT-NEET & Navodaya Coaching</a>
-                    <a href="#wings" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">Academic Wings (Nursery - 10th)</a>
+                    <a href="#campuses" onclick="toggleMobileDrawer()" class="block px-3 py-2 bg-gold-500/10 border border-gold-500/30 text-gold-400 rounded-lg font-bold flex items-center gap-2">
+                        <i class="fa-solid fa-building-columns"></i> Our 3 Specialized Campuses
+                    </a>
+                    <a href="#campus-jee" onclick="toggleMobileDrawer()" class="block px-3 py-2 bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 rounded-lg font-bold flex items-center gap-2 pl-6 text-xs">
+                        <i class="fa-solid fa-snowflake"></i> 1. A/C IIT-JEE & NEET Campus
+                    </a>
+                    <a href="#campus-state" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg text-xs pl-6">
+                        <i class="fa-solid fa-award text-gold-400 mr-1"></i> 2. State Board High School Campus
+                    </a>
+                    <a href="#campus-primary" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg text-xs pl-6">
+                        <i class="fa-solid fa-child text-teal-400 mr-1"></i> 3. Primary Section Campus
+                    </a>
+                    <a href="#leadership" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">Correspondent Bodla Satish (35+ Yrs)</a>
+                    <a href="#achievements" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">SSC State Ranks & Results</a>
+                    <a href="#special-coaching" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">Navodaya & Entrance Wings</a>
                     <a href="#admissions-section" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">Admissions 2026-27</a>
-                    <a href="#contact" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">Campus Contact & Map</a>
+                    <a href="#contact" onclick="toggleMobileDrawer()" class="block px-3 py-2 hover:bg-white/5 rounded-lg">Campus Locations & Contact</a>
                 </div>
             </div>
 
             <div class="pt-6 border-t border-slate-800 space-y-3">
                 <a href="https://www.instagram.com/vasavi_high_school_nachupally?igsh=MTQzNDdvbHVlbnI4bA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl shadow text-center flex items-center justify-center gap-2 text-xs">
-                    <i class="fa-brands fa-instagram text-sm"></i> Follow us on Instagram
+                    <i class="fa-brands fa-instagram text-sm"></i> Official Instagram Page
                 </a>
                 <button onclick="toggleMobileDrawer(); openAdmissionModal();" class="w-full py-3 bg-gradient-to-r from-gold-400 to-gold-600 text-navy-950 font-bold rounded-xl shadow-lg text-center block">
                     Apply for Admission
@@ -300,102 +303,102 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-[90vh] bg-navy-950 overflow-hidden flex items-center pt-8 pb-16">
-        <!-- Ambient Glowing Background Shapes -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-gold-500/15 to-teal-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-navy-800/40 rounded-full blur-[90px] pointer-events-none"></div>
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-gold-500/15 via-cyan-500/10 to-teal-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Left Hero Column -->
+                <!-- Left Hero Text -->
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-wide uppercase">
-                        <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-                        35+ Years Legacy • Correspondent Bodla Satish
+                        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        1,200+ Enrolled Students • 60+ Staff • 5 Bus Transport Fleet • 3 Campuses
                     </div>
 
                     <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15]">
-                        Educating Young Minds. <br>
-                        <span class="text-gradient-gold">Creating State Rankers & Navodaya Achievers</span> in Jagtial.
+                        Empowering <span class="text-gradient-gold">1,200+ Students</span> Across 3 Campuses with <span class="text-gradient-cyan">60+ Expert Faculty</span>.
                     </h1>
 
                     <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                        Guided by Correspondent <strong class="text-gold-400">Bodla Satish</strong> with <strong class="text-gold-400">35+ years of leadership</strong> in educating young minds. Proven record of <strong class="text-white">State & District Top 3 SSC Ranks</strong> and an outstanding <strong class="text-teal-400">Navodaya Selection Rate (2 seats out of 10 applied students last year)</strong>.
+                        Under the visionary leadership of Correspondent <strong class="text-gold-400">Bodla Satish</strong> (35+ years experience) and our team of <strong class="text-gold-400">60+ dedicated staff members</strong>, Vasavi High School is home to over <strong class="text-amber-300">1,200 students this academic year</strong>. Backed by a fleet of <strong class="text-cyan-300">5 safe school transport buses</strong>, we provide specialized learning across our Primary Campus, State Board High School, and 100% Air-Conditioned IIT-JEE & NEET Academy Campus.
                     </p>
 
-                    <!-- Feature Badges -->
+                    <!-- Feature Badges for Campuses, Staff, Transport -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1 text-xs">
-                        <span class="bg-navy-900 border border-gold-500/40 text-gold-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-medium">
-                            <i class="fa-solid fa-trophy text-gold-400"></i> SSC State & District Top 3 Ranks
+                        <span class="bg-navy-900 border border-gold-500/40 text-gold-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold shadow-md">
+                            <i class="fa-solid fa-user-graduate text-gold-400"></i> 1,200+ Enrolled Students
                         </span>
-                        <span class="bg-navy-900 border border-teal-500/40 text-teal-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-medium">
-                            <i class="fa-solid fa-award text-teal-400"></i> 2 Navodaya Seats / 10 Students
+                        <span class="bg-navy-900 border border-purple-500/40 text-purple-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold shadow-md">
+                            <i class="fa-solid fa-chalkboard-user text-purple-400"></i> 60+ Dedicated Staff
                         </span>
-                        <span class="bg-navy-900 border border-amber-500/40 text-amber-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-medium">
-                            <i class="fa-solid fa-atom text-amber-400"></i> IIT & NEET High School Prep
+                        <span class="bg-navy-900 border border-emerald-500/40 text-emerald-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold shadow-md">
+                            <i class="fa-solid fa-bus text-emerald-400"></i> 5 Bus Transport Fleet
                         </span>
+                        <a href="#campus-jee" class="bg-navy-900 border border-cyan-500/40 hover:border-cyan-400 text-cyan-300 px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold shadow-md transition-colors">
+                            <i class="fa-solid fa-snowflake text-cyan-400"></i> A/C IIT-JEE/NEET Campus
+                        </a>
                     </div>
 
-                    <!-- Hero Call to Actions -->
+                    <!-- Call to Actions -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
                         <button onclick="openAdmissionModal()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-navy-950 font-bold text-base rounded-2xl shadow-xl shadow-gold-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
                             <span>Apply for Admissions 2026-27</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
 
-                        <button onclick="openVideoModal()" class="w-full sm:w-auto px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/15 text-white font-semibold text-base rounded-2xl backdrop-blur-md transition-all flex items-center justify-center gap-3 group">
-                            <span class="w-8 h-8 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center text-xs group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-play ml-0.5"></i>
-                            </span>
-                            <span>Watch School Tour</span>
-                        </button>
+                        <a href="#campuses" class="w-full sm:w-auto px-6 py-4 bg-white/5 hover:bg-white/10 border border-white/15 text-white font-semibold text-base rounded-2xl backdrop-blur-md transition-all flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-building-columns text-gold-400"></i>
+                            <span>Explore 3 Campus Facilities</span>
+                        </a>
                     </div>
 
-                    <!-- Key Trust Indicators -->
-                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                    <!-- Trust Indicators Grid -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center lg:text-left">
                         <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-white font-serif">35+</div>
-                            <div class="text-xs text-slate-400">Years Leadership Experience</div>
+                            <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-serif">1,200+</div>
+                            <div class="text-xs text-slate-400">Enrolled Students</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-gold-400 font-serif">Top 3</div>
-                            <div class="text-xs text-slate-400">State & District SSC Ranks</div>
+                            <div class="text-2xl sm:text-3xl font-bold text-purple-400 font-serif">60+</div>
+                            <div class="text-xs text-slate-400">Faculty & Staff</div>
                         </div>
                         <div>
-                            <div class="text-2xl sm:text-3xl font-bold text-teal-400 font-serif">20%</div>
-                            <div class="text-xs text-slate-400">Navodaya Selection Success</div>
+                            <div class="text-2xl sm:text-3xl font-bold text-emerald-400 font-serif">5 Buses</div>
+                            <div class="text-xs text-slate-400">Transport Fleet</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-bold text-cyan-400 font-serif">100% A/C</div>
+                            <div class="text-xs text-slate-400">IIT-JEE & NEET Campus</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Hero Card Visual -->
+                <!-- Right Hero Visual Card -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700/50 bg-navy-900 group">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Vasavi High School Nachupally Students" class="w-full h-[440px] object-cover group-hover:scale-105 transition-transform duration-700">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Vasavi High School Campus Nachupally" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-700">
                         
-                        <!-- Overlay gradient -->
                         <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent"></div>
 
-                        <!-- Floating Accent Badge -->
-                        <div class="absolute top-4 right-4 glass-dark px-4 py-2.5 rounded-xl text-white text-xs flex items-center gap-2.5 border border-gold-500/30 shadow-lg animate-float">
-                            <i class="fa-solid fa-award text-gold-400 text-xl"></i>
+                        <!-- Badge -->
+                        <div class="absolute top-4 right-4 glass-dark px-4 py-2.5 rounded-xl text-white text-xs flex items-center gap-2.5 border border-cyan-500/40 shadow-lg">
+                            <i class="fa-solid fa-snowflake text-cyan-400 text-xl animate-pulse"></i>
                             <div>
-                                <div class="font-bold text-gold-400">35+ Years Experience</div>
-                                <div class="text-[10px] text-slate-300">Correspondent: Bodla Satish</div>
+                                <div class="font-bold text-cyan-300">IIT-JEE & NEET A/C Campus</div>
+                                <div class="text-[10px] text-slate-300">Nachupally, Jagtial</div>
                             </div>
                         </div>
 
-                        <!-- Card Bottom Info Block -->
-                        <div class="absolute bottom-6 left-6 right-6 p-4 glass-dark rounded-2xl border border-white/10">
+                        <!-- Bottom Interactive Box -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 glass-dark rounded-2xl border border-white/10 space-y-2">
                             <div class="flex items-center justify-between">
-                                <div>
-                                    <h3 class="text-white font-bold text-sm">Navodaya & SSC Board Excellence</h3>
-                                    <p class="text-xs text-slate-300">2 Navodaya selections out of 10 applicants last year</p>
-                                </div>
-                                <button onclick="openAdmissionModal()" class="px-3 py-1.5 bg-gold-500 text-navy-950 rounded-lg text-xs font-bold hover:bg-gold-400 transition-colors">
-                                    Enquire
-                                </button>
+                                <h3 class="text-white font-bold text-sm flex items-center gap-1.5">
+                                    <i class="fa-solid fa-layer-group text-gold-400"></i> Specialized Campus Structure
+                                </h3>
+                                <span class="bg-gold-500/20 text-gold-400 text-[10px] font-bold px-2 py-0.5 rounded border border-gold-500/30">Nachupally</span>
                             </div>
+                            <p class="text-xs text-slate-300">Choose between our specialized Primary, State Board, or A/C IIT-JEE Foundation Campuses.</p>
                         </div>
                     </div>
                 </div>
@@ -404,72 +407,161 @@
         </div>
     </section>
 
-    <!-- SSC & Navodaya Achievements Spotlight Section -->
-    <section id="achievements" class="py-16 bg-navy-900 border-y border-gold-500/30 relative overflow-hidden">
+    <!-- OUR 3 CAMPUSES SHOWCASE SECTION (CRITICAL NEW SECTION) -->
+    <section id="campuses" class="py-20 bg-navy-900 border-y border-gold-500/30 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
                 <span class="text-gold-400 font-bold text-xs uppercase tracking-widest bg-gold-500/10 px-3.5 py-1.5 rounded-full border border-gold-500/30">
-                    <i class="fa-solid fa-crown mr-1"></i> Consistent Educational Excellence
+                    <i class="fa-solid fa-building-columns mr-1"></i> Purpose-Built Infrastructure
                 </span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-white">
-                    State Ranks & Outstanding Entrance Results
+                    Our 3 Specialized Campuses in Nachupally
                 </h2>
                 <p class="text-slate-300 text-sm sm:text-base">
-                    Under the vision of Correspondent Bodla Satish, Vasavi High School consistently produces top academic achievers in Telangana SSC Board and competitive national entrance exams.
+                    To deliver focused age-appropriate learning, Vasavi High School operates three distinct campuses tailored for primary development, state board excellence, and competitive STEM mastery.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid lg:grid-cols-3 gap-8">
                 
-                <!-- Rank Card 1: SSC Top Ranks -->
-                <div class="bg-navy-950 rounded-2xl p-6 border border-gold-500/30 hover:border-gold-400 transition-all shadow-xl space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl font-bold">
-                        <i class="fa-solid fa-trophy"></i>
-                    </div>
+                <!-- CAMPUS 1: Primary Section Campus -->
+                <div id="campus-primary" class="bg-navy-950 rounded-3xl p-6 sm:p-8 border border-teal-500/30 hover:border-teal-400 transition-all shadow-xl flex flex-col justify-between group">
                     <div>
-                        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Telangana Board SSC</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-1">State & District Top 3 Ranks</h3>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-2xl font-bold border border-teal-500/30 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-child"></i>
+                            </div>
+                            <span class="bg-teal-500/20 text-teal-300 border border-teal-500/40 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">
+                                Nursery to Class 5
+                            </span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">1. Primary Section Campus</h3>
+                        <p class="text-teal-400 font-semibold text-xs mb-4">Nurturing Foundational Learning & Navodaya Wing</p>
+                        
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                            A dedicated, child-safe campus crafted specifically for young learners. Features vibrant classrooms, activity spaces, and specialized foundational coaching for Navodaya and Sainik school entrance exams.
+                        </p>
+
+                        <div class="space-y-3 border-t border-slate-800 pt-4 text-xs text-slate-300 mb-6">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i>
+                                <span>Play-based & Experiential Learning Tools</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i>
+                                <span>Caring & Expert Elementary Faculty</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i>
+                                <span>Special Navodaya & Sainik Entrance Wing</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-teal-400"></i>
+                                <span>Interactive Activity Rooms & Playground</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-slate-300 text-xs leading-relaxed">
-                        Consistent track record over past years, securing top 3 positions at state and district levels in SSC Board Examinations through personalized mentorship.
-                    </p>
-                    <div class="pt-2 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-check text-gold-400"></i> 100% Academic Dedication
-                    </div>
+
+                    <button onclick="openAdmissionModal('Primary')" class="w-full py-3 bg-teal-600/20 hover:bg-teal-600 text-teal-300 hover:text-white border border-teal-500/40 font-bold rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                        <span>Inquire Primary Campus</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
                 </div>
 
-                <!-- Rank Card 2: Navodaya Selections -->
-                <div class="bg-navy-950 rounded-2xl p-6 border border-teal-500/30 hover:border-teal-400 transition-all shadow-xl space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-2xl font-bold">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
+                <!-- CAMPUS 2: State Board High School Campus -->
+                <div id="campus-state" class="bg-navy-950 rounded-3xl p-6 sm:p-8 border border-amber-500/40 hover:border-amber-400 transition-all shadow-xl flex flex-col justify-between group">
                     <div>
-                        <span class="text-xs font-bold text-teal-400 uppercase tracking-wider">Navodaya Selection Result</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-1">2 Seats Out of 10 Students</h3>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold border border-amber-500/30 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">
+                                Classes 6 to 10
+                            </span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">2. State Board High School Campus</h3>
+                        <p class="text-amber-400 font-semibold text-xs mb-4">Telangana SSC Board Ranks & Academic Mastery</p>
+                        
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                            Dedicated high school campus focused on the Telangana State SSC curriculum. Renowned for consistent State & District top ranks, structured exams, and comprehensive board preparation.
+                        </p>
+
+                        <div class="space-y-3 border-t border-slate-800 pt-4 text-xs text-slate-300 mb-6">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>Proven State & District SSC Board Ranks</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>35+ Years Proven Curriculum Direction</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>Subject Specialist Mentors & Revision Plans</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-amber-400"></i>
+                                <span>Science Labs & Sports Ground Access</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-slate-300 text-xs leading-relaxed">
-                        An extraordinary 20% conversion rate in JNVST Navodaya entrance last year—2 out of 10 applied 5th & 6th grade students secured coveted admissions!
-                    </p>
-                    <div class="pt-2 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-check text-teal-400"></i> Specialized 5th & 6th Prep Batch
-                    </div>
+
+                    <button onclick="openAdmissionModal('High School')" class="w-full py-3 bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-navy-950 border border-amber-500/40 font-bold rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+                        <span>Inquire State Board Campus</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
                 </div>
 
-                <!-- Rank Card 3: 35+ Years Legacy -->
-                <div class="bg-navy-950 rounded-2xl p-6 border border-amber-500/30 hover:border-amber-400 transition-all shadow-xl space-y-4 md:col-span-2 lg:col-span-1">
-                    <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl font-bold">
-                        <i class="fa-solid fa-user-tie"></i>
+                <!-- CAMPUS 3: Air-Conditioned IIT-JEE & NEET Campus (FEATURED HIGHLIGHT) -->
+                <div id="campus-jee" class="bg-gradient-to-br from-navy-950 via-slate-900 to-navy-950 rounded-3xl p-6 sm:p-8 border-2 border-gold-500 hover:border-gold-400 transition-all shadow-2xl flex flex-col justify-between group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-gold-500 text-navy-950 font-extrabold text-[10px] uppercase px-3 py-1 rounded-bl-xl shadow-md">
+                        100% A/C Campus
                     </div>
+
                     <div>
-                        <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Leadership & Vision</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-1">35+ Years Experience</h3>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl font-bold border border-cyan-500/30 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <span class="bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[10px] font-extrabold px-3 py-1 rounded-full uppercase">
+                                Classes 6 to 10
+                            </span>
+                        </div>
+
+                        <h3 class="font-serif text-2xl font-bold text-white mb-2">3. IIT-JEE & NEET A/C Campus</h3>
+                        <p class="text-cyan-300 font-semibold text-xs mb-4">Integrated STEM Foundation in Air-Conditioned Classrooms</p>
+                        
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                            Our premier, state-of-the-art campus fitted with <strong class="text-cyan-300">100% Air-Conditioned Classrooms</strong>. Offers intensive conceptual coaching in Physics, Chemistry, Mathematics, and Biology for future engineers and doctors.
+                        </p>
+
+                        <div class="space-y-3 border-t border-slate-800 pt-4 text-xs text-slate-300 mb-6">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-cyan-400"></i>
+                                <span>Fully Air-Conditioned Dust-Free Rooms</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-cyan-400"></i>
+                                <span>Integrated IIT-JEE & NEET Syllabus</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-cyan-400"></i>
+                                <span>Weekly OMR Objective & Analytical Tests</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-cyan-400"></i>
+                                <span>Expert Competitive Foundation STEM Faculty</span>
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-slate-300 text-xs leading-relaxed">
-                        Correspondent Bodla Satish brings over three and a half decades of relentless passion in shaping disciplined, confident, and high-achieving young minds in Nachupally & Jagtial.
-                    </p>
-                    <div class="pt-2 border-t border-slate-800 text-xs text-slate-400 flex items-center gap-2">
-                        <i class="fa-solid fa-circle-check text-amber-400"></i> Correspondent Bodla Satish
-                    </div>
+
+                    <button onclick="openAdmissionModal('IIT-NEET')" class="w-full py-3.5 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-navy-950 font-bold rounded-xl text-xs shadow-lg hover:scale-[1.01] transition-transform flex items-center justify-center gap-2">
+                        <span>Enroll in A/C IIT/NEET Campus</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
                 </div>
 
             </div>
@@ -481,47 +573,53 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Director / Correspondent Photo Block -->
+                <!-- Director Photo Block -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative rounded-3xl overflow-hidden border-2 border-gold-500/30 p-2 bg-navy-950">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Correspondent Bodla Satish - Vasavi High School" class="w-full h-[450px] object-cover rounded-2xl">
                         
                         <div class="absolute bottom-6 left-6 right-6 glass-dark p-4 rounded-xl border border-gold-500/30 shadow-2xl">
                             <h4 class="font-serif text-lg font-bold text-gold-400">Bodla Satish</h4>
-                            <p class="text-xs text-white font-semibold">Correspondent & Educational Pioneer</p>
-                            <p class="text-[10px] text-slate-300 mt-0.5"><i class="fa-solid fa-award text-gold-400 mr-1"></i>35+ Years in Educating Young Minds</p>
+                            <p class="text-xs text-white font-semibold">Correspondent & Educational Visionary</p>
+                            <p class="text-[10px] text-slate-300 mt-0.5"><i class="fa-solid fa-award text-gold-400 mr-1"></i>35+ Years Leadership in Nachupally & Jagtial</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Text & Message Block -->
+                <!-- Correspondent Message -->
                 <div class="lg:col-span-7 space-y-6">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 text-gold-400 text-xs font-bold uppercase tracking-widest">
                         Message from Correspondent Bodla Satish
                     </div>
 
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight">
-                        "For over 35 years, our singular mission has been to give children the strongest foundation for competitive and lifelong success."
+                        "Empowering 1,200+ students with 60+ dedicated educators and safe campus transport."
                     </h2>
 
                     <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-                        "Welcome to Vasavi High School, Nachupally. With 35+ years of personal experience in educating young minds, I have witnessed generation after generation of our students achieve top ranks in Telangana State SSC exams, secure prestigious Navodaya seats, and build strong foundations for IIT-JEE and NEET careers."
+                        "For over 35 years, Vasavi High School has been committed to educational excellence in Jagtial. Today, with over <strong class="text-gold-400">1,200 students enrolled this year</strong>, supported by <strong class="text-gold-400">60+ expert faculty and staff members</strong> and a safe fleet of <strong class="text-emerald-400">5 school buses</strong>, we provide holistic growth for every child. Across our <strong class="text-teal-300">Primary Campus</strong>, <strong class="text-amber-300">State Board High School Campus</strong>, and premier <strong class="text-cyan-300">Air-Conditioned IIT-JEE & NEET Campus</strong>, every student receives individualized mentoring."
                     </p>
 
-                    <div class="pt-2 grid sm:grid-cols-2 gap-4">
-                        <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5">
-                            <i class="fa-solid fa-medal text-gold-400 text-xl mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-sm text-white">State & District Ranks</h4>
-                                <p class="text-xs text-slate-400">Regular top 3 ranks in SSC Public exams across Jagtial District & Telangana State.</p>
-                            </div>
+                    <div class="pt-2 grid sm:grid-cols-4 gap-3">
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 text-center">
+                            <i class="fa-solid fa-user-graduate text-gold-400 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-white">1,200+ Students</h4>
+                            <p class="text-[11px] text-slate-400">Enrolled This Year</p>
                         </div>
-                        <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/5 border border-white/5">
-                            <i class="fa-solid fa-bullseye text-teal-400 text-xl mt-1"></i>
-                            <div>
-                                <h4 class="font-bold text-sm text-white">Proven Entrance Results</h4>
-                                <p class="text-xs text-slate-400">Last year 2 Navodaya seats achieved out of 10 applied students with specialized coaching.</p>
-                            </div>
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 text-center">
+                            <i class="fa-solid fa-chalkboard-user text-purple-400 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-white">60+ Staff</h4>
+                            <p class="text-[11px] text-slate-400">Qualified Educators</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 text-center">
+                            <i class="fa-solid fa-bus text-emerald-400 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-white">5 Bus Fleet</h4>
+                            <p class="text-[11px] text-slate-400">Jagtial Route Network</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-white/5 border border-white/5 text-center">
+                            <i class="fa-solid fa-snowflake text-cyan-400 text-lg mb-1"></i>
+                            <h4 class="font-bold text-xs text-white">A/C Campus</h4>
+                            <p class="text-[11px] text-slate-400">IIT-JEE & NEET Foundation</p>
                         </div>
                     </div>
 
@@ -530,7 +628,7 @@
                             Apply for Admission 2026-27
                         </button>
                         <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="text-gold-400 font-semibold text-xs hover:underline inline-flex items-center gap-2">
-                            <i class="fa-solid fa-map-pin"></i> Visit Nachupally Campus <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            <i class="fa-solid fa-map-pin"></i> Visit Nachupally Campuses <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </a>
                     </div>
                 </div>
@@ -539,116 +637,119 @@
         </div>
     </section>
 
-    <!-- Highlighted Special Coaching Programs Banner -->
-    <section id="special-coaching" class="py-16 bg-navy-900 border-y border-gold-500/30 relative">
+    <!-- Specialized Competitive Wings & Foundation -->
+    <section id="special-coaching" class="py-16 bg-navy-950 border-y border-gold-500/30 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
                 <span class="text-gold-400 font-bold text-xs uppercase tracking-widest bg-gold-500/10 px-3.5 py-1.5 rounded-full border border-gold-500/30">
-                    <i class="fa-solid fa-graduation-cap mr-1"></i> Specialized Competitive Wings
+                    <i class="fa-solid fa-graduation-cap mr-1"></i> Integrated Competitive Programs
                 </span>
                 <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-white">
-                    Integrated Competitive Exam Coaching
+                    Specialized Competitive Wings
                 </h2>
                 <p class="text-slate-300 text-sm sm:text-base">
-                    Empowering students at Vasavi High School with rigorous early preparation for national competitive examinations alongside regular SSC Board curriculum.
+                    Comprehensive preparation for national entrance examinations conducted alongside Telangana SSC Board curriculum in our designated campus wings.
                 </p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-8">
+            <div class="grid lg:grid-cols-12 gap-8">
                 
-                <!-- Card 1: High School IIT & NEET Foundation -->
-                <div class="bg-gradient-to-br from-navy-950 via-slate-900 to-navy-950 rounded-3xl p-8 border border-gold-500/30 shadow-2xl relative overflow-hidden group hover:border-gold-500 transition-all">
-                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-gold-500/10 rounded-full blur-2xl group-hover:bg-gold-500/20 transition-all"></div>
-                    
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-14 h-14 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-2xl font-bold border border-gold-500/30">
+                <!-- High School IIT & NEET Foundation Feature Block -->
+                <div class="lg:col-span-8 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-950 rounded-3xl p-8 border-2 border-cyan-500/50 shadow-2xl relative overflow-hidden group hover:border-cyan-400 transition-all">
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all"></div>
+
+                    <div class="flex flex-wrap items-center gap-3 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-2xl font-bold border border-cyan-500/30">
                             <i class="fa-solid fa-atom"></i>
                         </div>
-                        <span class="bg-gold-500 text-navy-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                            Classes 6th to 10th
-                        </span>
+                        <div>
+                            <span class="bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                <i class="fa-solid fa-snowflake text-xs mr-1"></i> Air-Conditioned Campus
+                            </span>
+                            <span class="bg-gold-500/20 text-gold-300 border border-gold-500/40 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider ml-1">
+                                Grades 6th to 10th
+                            </span>
+                        </div>
                     </div>
 
-                    <h3 class="font-serif text-2xl font-bold text-white mb-3">
-                        Integrated IIT & NEET Foundation Program
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">
+                        Integrated IIT-JEE & NEET Foundation Academy
                     </h3>
                     
                     <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-                        Designed for high school students aspiring for Engineering (IIT-JEE) and Medical (NEET) careers. Our curriculum strengthens core Physics, Chemistry, Mathematics, and Biology concepts with analytical problem-solving skills.
+                        Designed for ambitious high school students seeking early competitive mastery for Engineering (IIT-JEE) and Medical (NEET) careers. Conducted inside our dedicated <strong class="text-cyan-300">Air-Conditioned Campus</strong>, this program builds strong analytical reasoning, problem solving, and conceptual scientific clarity.
                     </p>
 
-                    <div class="space-y-3 mb-8 border-t border-slate-800 pt-6">
+                    <div class="grid sm:grid-cols-2 gap-4 mb-8 border-t border-slate-800 pt-6">
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-gold-400 text-sm mt-0.5"></i>
+                            <i class="fa-solid fa-circle-check text-cyan-400 text-sm mt-0.5"></i>
                             <div class="text-xs text-slate-300">
-                                <strong class="text-white">Concept-Oriented Syllabus:</strong> Deep-dive into fundamental concepts in Mathematics & Sciences beyond regular SSC textbooks.
+                                <strong class="text-white">Climate-Controlled Comfort:</strong> Full A/C environment ensures maximum focus and stamina during study hours.
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-gold-400 text-sm mt-0.5"></i>
+                            <i class="fa-solid fa-circle-check text-cyan-400 text-sm mt-0.5"></i>
                             <div class="text-xs text-slate-300">
-                                <strong class="text-white">Speed & Accuracy Training:</strong> Analytical reasoning, mental math shortcuts, and weekly MCQ objective tests.
+                                <strong class="text-white">Concept Mastery:</strong> Advanced syllabus covering Physics, Chemistry, Mathematics, and Biology beyond board level.
                             </div>
                         </div>
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-gold-400 text-sm mt-0.5"></i>
+                            <i class="fa-solid fa-circle-check text-cyan-400 text-sm mt-0.5"></i>
                             <div class="text-xs text-slate-300">
-                                <strong class="text-white">Expert STEM Mentors:</strong> Guidance from experienced faculty specialized in IIT & NEET foundation coaching.
+                                <strong class="text-white">Speed & Accuracy Testing:</strong> Weekly objective OMR practice papers and problem-solving shortcuts.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-cyan-400 text-sm mt-0.5"></i>
+                            <div class="text-xs text-slate-300">
+                                <strong class="text-white">STEM Mentorship:</strong> Taught by subject teachers specialized in competitive exam coaching.
                             </div>
                         </div>
                     </div>
 
-                    <button onclick="openAdmissionModal('IIT-NEET')" class="w-full py-3.5 bg-gradient-to-r from-gold-400 to-amber-600 text-navy-950 font-bold rounded-xl text-xs sm:text-sm shadow-lg hover:scale-[1.01] transition-transform flex items-center justify-center gap-2">
-                        <span>Enroll in IIT/NEET Foundation Batch</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </button>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <button onclick="openAdmissionModal('IIT-NEET')" class="flex-1 py-3.5 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-navy-950 font-bold rounded-xl text-xs sm:text-sm shadow-lg hover:scale-[1.01] transition-transform flex items-center justify-center gap-2">
+                            <span>Enroll in A/C IIT/NEET Foundation Campus</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Card 2: Navodaya & Sainik School Coaching -->
-                <div class="bg-gradient-to-br from-navy-950 via-slate-900 to-navy-950 rounded-3xl p-8 border border-teal-500/30 shadow-2xl relative overflow-hidden group hover:border-teal-400 transition-all">
-                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-teal-500/10 rounded-full blur-2xl group-hover:bg-teal-500/20 transition-all"></div>
-
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="w-14 h-14 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-2xl font-bold border border-teal-500/30">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
-                        <span class="bg-teal-500 text-white text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
-                            Classes 5th & 6th
-                        </span>
-                    </div>
-
-                    <h3 class="font-serif text-2xl font-bold text-white mb-3">
-                        Navodaya & Sainik School Entrance Coaching
-                    </h3>
-
-                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-                        Specialized entrance exam preparation for 5th and 6th-grade students aiming for admissions into Jawahar Navodaya Vidyalayas (JNVST) and Sainik Schools (AISSEE) across Telangana and India.
-                    </p>
-
-                    <div class="space-y-3 mb-8 border-t border-slate-800 pt-6">
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-teal-400 text-sm mt-0.5"></i>
-                            <div class="text-xs text-slate-300">
-                                <strong class="text-white">Proven Results (2/10 Selected):</strong> Last year 2 students out of 10 applicants secured Jawahar Navodaya Vidyalaya seats.
+                <!-- Navodaya & Sainik Card -->
+                <div class="lg:col-span-4 bg-gradient-to-br from-navy-900 via-slate-900 to-navy-950 rounded-3xl p-6 sm:p-8 border border-teal-500/30 shadow-2xl relative overflow-hidden group hover:border-teal-400 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl font-bold border border-teal-500/30">
+                                <i class="fa-solid fa-shield-halved"></i>
                             </div>
+                            <span class="bg-teal-500 text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                Primary Campus
+                            </span>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-teal-400 text-sm mt-0.5"></i>
-                            <div class="text-xs text-slate-300">
-                                <strong class="text-white">Mental Ability & Logic:</strong> Intensive training in spatial reasoning, pattern matching, visual logic, and diagrammatic puzzles.
+
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">
+                            Navodaya & Sainik School Entrance Wing
+                        </h3>
+
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                            Hosted at our Primary Campus, providing early competitive coaching for students aspiring for admissions into Jawahar Navodaya Vidyalayas (JNVST) and Sainik Schools.
+                        </p>
+
+                        <div class="space-y-3 mb-6 border-t border-slate-800 pt-4 text-xs text-slate-300">
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-teal-400 text-xs mt-0.5"></i>
+                                <span><strong>Mental Ability & Logic:</strong> Systematic training in spatial reasoning and mental mathematics.</span>
                             </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-circle-check text-teal-400 text-sm mt-0.5"></i>
-                            <div class="text-xs text-slate-300">
-                                <strong class="text-white">Mock Exams & OMR Practice:</strong> Regular full-length practice tests on official OMR sheets to build time management.
+                            <div class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-teal-400 text-xs mt-0.5"></i>
+                                <span><strong>OMR Exam Practice:</strong> Regular simulated test series to build speed and confidence.</span>
                             </div>
                         </div>
                     </div>
 
-                    <button onclick="openAdmissionModal('Navodaya-Sainik')" class="w-full py-3.5 bg-gradient-to-r from-teal-400 to-teal-600 text-navy-950 font-bold rounded-xl text-xs sm:text-sm shadow-lg hover:scale-[1.01] transition-transform flex items-center justify-center gap-2">
-                        <span>Enroll in Navodaya & Sainik Batch</span>
+                    <button onclick="openAdmissionModal('Navodaya-Sainik')" class="w-full py-3 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl text-xs transition-colors flex items-center justify-center gap-2">
+                        <span>Inquire Navodaya Batch</span>
                         <i class="fa-solid fa-arrow-right text-xs"></i>
                     </button>
                 </div>
@@ -657,132 +758,49 @@
         </div>
     </section>
 
-    <!-- Statistics Counter Strip -->
-    <section id="stats" class="bg-navy-950 border-b border-slate-800 py-12 relative">
+    <!-- SSC Results & Statistics Counter Strip -->
+    <section id="achievements" class="bg-navy-950 border-b border-slate-800 py-12 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
                 
                 <div class="text-center p-4 rounded-2xl bg-white/5 border border-white/5">
                     <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 mx-auto flex items-center justify-center mb-3 text-xl">
-                        <i class="fa-solid fa-calendar-check"></i>
+                        <i class="fa-solid fa-user-graduate"></i>
                     </div>
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">35+</div>
-                    <p class="text-xs sm:text-sm text-slate-400 font-medium mt-1">Years Educational Experience</p>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-serif">1,200+</div>
+                    <p class="text-xs text-slate-400 font-medium mt-1">Students Enrolled This Year</p>
                 </div>
 
                 <div class="text-center p-4 rounded-2xl bg-white/5 border border-white/5">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 mx-auto flex items-center justify-center mb-3 text-xl">
-                        <i class="fa-solid fa-trophy"></i>
-                    </div>
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">Top 3</div>
-                    <p class="text-xs sm:text-sm text-slate-400 font-medium mt-1">State & District SSC Ranks</p>
-                </div>
-
-                <div class="text-center p-4 rounded-2xl bg-white/5 border border-white/5">
-                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 mx-auto flex items-center justify-center mb-3 text-xl">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">2 / 10</div>
-                    <p class="text-xs sm:text-sm text-slate-400 font-medium mt-1">Navodaya Seats Last Year</p>
-                </div>
-
-                <div class="text-center p-4 rounded-2xl bg-white/5 border border-white/5">
-                    <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 mx-auto flex items-center justify-center mb-3 text-xl">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 mx-auto flex items-center justify-center mb-3 text-xl">
                         <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
-                    <div class="text-3xl sm:text-4xl font-extrabold text-white font-serif tracking-tight">60+</div>
-                    <p class="text-xs sm:text-sm text-slate-400 font-medium mt-1">Dedicated Teachers & Staff</p>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-serif">60+</div>
+                    <p class="text-xs text-slate-400 font-medium mt-1">Qualified Faculty & Staff</p>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Academic Wings Bento Grid -->
-    <section id="wings" class="py-20 bg-slate-50 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-gold-600 font-bold text-xs uppercase tracking-widest bg-gold-500/10 px-3 py-1 rounded-full">
-                    Telangana SSC Curriculum & Competitive Wings
-                </span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-navy-900">
-                    Academic Programs & Wings
-                </h2>
-                <p class="text-slate-600 text-sm sm:text-base">
-                    Comprehensive education tailored from foundational early childhood years to competitive entrance and SSC Board examinations.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                
-                <!-- Pre-Primary Division -->
-                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-child"></i>
-                        </div>
-                        <span class="text-xs font-bold text-amber-700 uppercase tracking-wider">Nursery, LKG, UKG</span>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mt-1 mb-3">Pre-Primary Wing</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
-                            Joyful, play-based learning environment designed to build strong early language, numeracy, sensory, and motor skills.
-                        </p>
+                <div class="text-center p-4 rounded-2xl bg-white/5 border border-white/5">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 mx-auto flex items-center justify-center mb-3 text-xl">
+                        <i class="fa-solid fa-bus"></i>
                     </div>
-                    <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Caring & Trained Female Staff</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Interactive Play & Activity Kits</li>
-                    </ul>
-                    <button onclick="openAdmissionModal('Pre-Primary')" class="w-full py-2.5 rounded-xl border border-slate-200 hover:border-gold-500 hover:bg-gold-500 hover:text-navy-950 font-semibold text-xs transition-colors">
-                        Inquire for Pre-Primary
-                    </button>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-serif">5 Buses</div>
+                    <p class="text-xs text-slate-400 font-medium mt-1">School Transport Fleet</p>
                 </div>
 
-                <!-- Primary School Division with Navodaya/Sainik -->
-                <div class="bg-white rounded-3xl p-6 border-2 border-teal-500/30 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-teal-600 text-white font-bold text-[10px] uppercase px-3 py-1 rounded-bl-xl">
-                        2 Navodaya Seats Last Year
+                <div class="text-center p-4 rounded-2xl bg-white/5 border border-white/5">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 mx-auto flex items-center justify-center mb-3 text-xl">
+                        <i class="fa-solid fa-snowflake"></i>
                     </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-book-open-reader"></i>
-                        </div>
-                        <span class="text-xs font-bold text-teal-700 uppercase tracking-wider">Classes 1 – 5 & 6</span>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mt-1 mb-3">Primary Wing + Navodaya/Sainik</h3>
-                        <p class="text-slate-600 text-xs leading-relaxed mb-6">
-                            Structured core academics with specialized coaching for 5th & 6th grade students preparing for Navodaya & Sainik School entrances.
-                        </p>
-                    </div>
-                    <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Mental Ability & Logical Reasoning</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Speed Mathematics & OMR Tests</li>
-                    </ul>
-                    <button onclick="openAdmissionModal('Navodaya-Sainik')" class="w-full py-2.5 rounded-xl border border-teal-500 bg-teal-50 hover:bg-teal-500 hover:text-white text-teal-800 font-semibold text-xs transition-colors">
-                        Inquire Navodaya / Sainik Coaching
-                    </button>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-serif">100% A/C</div>
+                    <p class="text-xs text-slate-400 font-medium mt-1">IIT-JEE / NEET Campus</p>
                 </div>
 
-                <!-- High School / SSC + IIT & NEET Division -->
-                <div class="bg-navy-950 text-white rounded-3xl p-6 border-2 border-gold-500 shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-gold-500 text-navy-950 font-bold text-[10px] uppercase px-3 py-1 rounded-bl-xl">
-                        State & District Rankers
+                <div class="text-center p-4 rounded-2xl bg-white/5 border border-white/5 col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 mx-auto flex items-center justify-center mb-3 text-xl">
+                        <i class="fa-solid fa-award"></i>
                     </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-2xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl font-bold mb-6 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-atom"></i>
-                        </div>
-                        <span class="text-xs font-bold text-gold-400 uppercase tracking-wider">Classes 6 – 10 (SSC & Foundation)</span>
-                        <h3 class="font-serif text-xl font-bold text-white mt-1 mb-3">High School (SSC + IIT & NEET)</h3>
-                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
-                            Telangana Board SSC curriculum paired with rigorous IIT-JEE and NEET foundation modules in Physics, Chemistry, Biology, and Maths.
-                        </p>
-                    </div>
-                    <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-4 mb-6">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> IIT/NEET Conceptual Problem Solving</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-400"></i> Class 10 SSC Public Exam Guidance</li>
-                    </ul>
-                    <button onclick="openAdmissionModal('IIT-NEET')" class="w-full py-2.5 rounded-xl bg-gold-500 text-navy-950 font-bold text-xs hover:bg-gold-400 transition-colors">
-                        Inquire IIT / NEET Foundation
-                    </button>
+                    <div class="text-2xl sm:text-3xl font-extrabold text-white font-serif">35+ Yrs</div>
+                    <p class="text-xs text-slate-400 font-medium mt-1">Educational Excellence</p>
                 </div>
 
             </div>
@@ -790,48 +808,54 @@
     </section>
 
     <!-- Campus Life & Infrastructure Showcase -->
-    <section id="campus-life" class="py-20 bg-navy-950 text-white relative">
+    <section id="campus-life" class="py-20 bg-slate-900 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div>
-                    <span class="text-teal-400 font-bold text-xs uppercase tracking-widest bg-teal-500/10 px-3 py-1 rounded-full">
-                        Nachupally Campus
+                    <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full">
+                        Facilities Across Our 3 Campuses
                     </span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-white mt-3">
-                        Campus Facilities & Learning Spaces
+                        Campus Infrastructure & Transport
                     </h2>
                 </div>
 
-                <!-- Tab Navigation Controls -->
-                <div class="flex flex-wrap gap-2 bg-navy-900 p-1.5 rounded-2xl border border-slate-800">
-                    <button onclick="switchCampusTab('labs')" id="tab-labs" class="campus-tab-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-gold-500 text-navy-950">
+                <!-- Tab Navigation -->
+                <div class="flex flex-wrap gap-2 bg-navy-950 p-1.5 rounded-2xl border border-slate-800">
+                    <button onclick="switchCampusTab('ac')" id="tab-ac" class="campus-tab-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-gold-500 text-navy-950">
+                        <i class="fa-solid fa-snowflake mr-1"></i> A/C IIT-JEE Campus
+                    </button>
+                    <button onclick="switchCampusTab('transport')" id="tab-transport" class="campus-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white">
+                        <i class="fa-solid fa-bus mr-1"></i> 5 Bus Fleet Transport
+                    </button>
+                    <button onclick="switchCampusTab('state')" id="tab-state" class="campus-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white">
+                        State Board High School
+                    </button>
+                    <button onclick="switchCampusTab('primary')" id="tab-primary" class="campus-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white">
+                        Primary Section Campus
+                    </button>
+                    <button onclick="switchCampusTab('labs')" id="tab-labs" class="campus-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white">
                         Science & Computer Labs
-                    </button>
-                    <button onclick="switchCampusTab('sports')" id="tab-sports" class="campus-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white">
-                        Playground & Sports
-                    </button>
-                    <button onclick="switchCampusTab('library')" id="tab-library" class="campus-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all text-slate-300 hover:text-white">
-                        Library & Study Room
                     </button>
                 </div>
             </div>
 
-            <!-- Tab Content Display Grid -->
-            <div id="campus-tab-content" class="grid lg:grid-cols-12 gap-8 items-center bg-navy-900 p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
+            <!-- Tab Content Display -->
+            <div id="campus-tab-content" class="grid lg:grid-cols-12 gap-8 items-center bg-navy-950 p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-2xl">
                 <div class="lg:col-span-7 space-y-4">
-                    <span id="facility-category" class="text-gold-400 font-bold text-xs uppercase">Practical Learning</span>
-                    <h3 id="facility-title" class="font-serif text-2xl sm:text-3xl font-bold text-white">Equipped Science & Computer Laboratories</h3>
+                    <span id="facility-category" class="text-cyan-400 font-bold text-xs uppercase">Specialized Campus Highlight</span>
+                    <h3 id="facility-title" class="font-serif text-2xl sm:text-3xl font-bold text-white">Air-Conditioned IIT-JEE & NEET Campus</h3>
                     <p id="facility-desc" class="text-slate-300 text-sm leading-relaxed">
-                        Our science and computer labs give students hands-on exposure to practical physics, chemistry, biology, and basic computer skills under guidance of expert faculty.
+                        Equipped with 100% climate-controlled classrooms, interactive digital screens, and an academic environment engineered for intensive problem-solving and competitive entrance success.
                     </p>
-                    <div class="pt-4 flex flex-wrap gap-4" id="facility-highlights">
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-laptop text-teal-400 mr-2"></i>Computer Lab with Internet</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-flask text-teal-400 mr-2"></i>Physics & Bio Apparatus</span>
+                    <div class="pt-4 flex flex-wrap gap-3" id="facility-highlights">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-snowflake text-cyan-400 mr-2"></i>Full A/C Dust-Free Classrooms</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-slate-300"><i class="fa-solid fa-desktop text-cyan-400 mr-2"></i>Smart Boards & Digital Audio-Visual Aids</span>
                     </div>
                 </div>
                 <div class="lg:col-span-5">
-                    <img id="facility-img" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80" alt="Vasavi High School Science Laboratory" class="w-full h-72 object-cover rounded-2xl border border-slate-700 shadow-lg transition-all duration-500">
+                    <img id="facility-img" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Vasavi High School Campus Facilities" class="w-full h-72 object-cover rounded-2xl border border-slate-700 shadow-lg transition-all duration-500">
                 </div>
             </div>
 
@@ -843,42 +867,42 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12">
                 
-                <!-- Left: Circulars & Notices -->
+                <!-- Circulars -->
                 <div class="lg:col-span-7 space-y-6">
                     <div class="flex items-center justify-between border-b border-slate-300 pb-4">
                         <h2 class="font-serif text-2xl font-bold text-navy-900 flex items-center gap-2">
-                            <i class="fa-solid fa-newspaper text-gold-600"></i> Circulars & Achievements
+                            <i class="fa-solid fa-newspaper text-gold-600"></i> Circulars & Academic Updates
                         </h2>
-                        <a href="#contact" onclick="openToast('Contact office for official circular copies.')" class="text-xs font-bold text-gold-600 hover:underline">Notice Board</a>
+                        <span class="text-xs font-bold text-gold-600">3 Campuses Circulars</span>
                     </div>
 
                     <div class="space-y-4">
                         
                         <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-gold-500 text-navy-950 shrink-0 flex flex-col items-center justify-center font-bold text-xs">
-                                <span>05</span>
-                                <span class="text-[9px] uppercase tracking-wider">MAR</span>
-                            </div>
-                            <div class="space-y-1">
-                                <span class="text-[10px] font-bold bg-gold-100 text-gold-800 px-2 py-0.5 rounded uppercase">Navodaya / Sainik Prep</span>
-                                <h4 class="font-bold text-navy-900 text-sm hover:text-gold-600 transition-colors cursor-pointer" onclick="openToast('Opening Navodaya Mock Test Details...')">
-                                    Navodaya & Sainik Entrance Batch Admissions (Classes 5 & 6)
-                                </h4>
-                                <p class="text-xs text-slate-500">Following last year's 2 Navodaya selections, fresh weekend and daily intensive practice batches are starting.</p>
-                            </div>
-                        </div>
-
-                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-navy-950 text-gold-400 shrink-0 flex flex-col items-center justify-center font-bold text-xs">
+                            <div class="w-12 h-12 rounded-xl bg-navy-950 text-cyan-400 shrink-0 flex flex-col items-center justify-center font-bold text-xs">
                                 <span>12</span>
                                 <span class="text-[9px] uppercase tracking-wider">MAR</span>
                             </div>
                             <div class="space-y-1">
-                                <span class="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded uppercase">IIT-NEET Foundation</span>
-                                <h4 class="font-bold text-navy-900 text-sm hover:text-gold-600 transition-colors cursor-pointer" onclick="openToast('IIT-NEET Olympiad details loaded')">
-                                    High School Science & Maths Talent Olympiad (Classes 6 to 10)
+                                <span class="text-[10px] font-bold bg-cyan-100 text-cyan-800 px-2 py-0.5 rounded uppercase">A/C IIT-JEE Campus</span>
+                                <h4 class="font-bold text-navy-900 text-sm hover:text-gold-600 transition-colors cursor-pointer" onclick="openToast('IIT-NEET Talent Exam details loaded')">
+                                    A/C Campus STEM & Entrance Talent Examination (Classes 6-10)
                                 </h4>
-                                <p class="text-xs text-slate-500">Annual screening test for integrated IIT-JEE & NEET foundation scholarship batch.</p>
+                                <p class="text-xs text-slate-500">Screening test for integrated IIT-JEE & NEET foundation batch in air-conditioned smart classrooms.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-amber-600 text-white shrink-0 flex flex-col items-center justify-center font-bold text-xs">
+                                <span>18</span>
+                                <span class="text-[9px] uppercase tracking-wider">MAR</span>
+                            </div>
+                            <div class="space-y-1">
+                                <span class="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded uppercase">State Board Campus</span>
+                                <h4 class="font-bold text-navy-900 text-sm hover:text-gold-600 transition-colors cursor-pointer" onclick="openToast('SSC Revision Schedule details loaded')">
+                                    Class 10 Telangana SSC Board Intensive Exam Revision Plan
+                                </h4>
+                                <p class="text-xs text-slate-500">Special subject-wise mock examinations and personalized doubt clearing for SSC aspirants.</p>
                             </div>
                         </div>
 
@@ -888,18 +912,18 @@
                                 <span class="text-[9px] uppercase tracking-wider">MAR</span>
                             </div>
                             <div class="space-y-1">
-                                <span class="text-[10px] font-bold bg-teal-100 text-teal-800 px-2 py-0.5 rounded uppercase">Parent Meet</span>
-                                <h4 class="font-bold text-navy-900 text-sm hover:text-gold-600 transition-colors cursor-pointer" onclick="openToast('Opening PTM Schedule details...')">
-                                    Parent Interactive Session with Correspondent Bodla Satish
+                                <span class="text-[10px] font-bold bg-teal-100 text-teal-800 px-2 py-0.5 rounded uppercase">Primary Campus</span>
+                                <h4 class="font-bold text-navy-900 text-sm hover:text-gold-600 transition-colors cursor-pointer" onclick="openToast('Primary Campus Orientation details loaded')">
+                                    Primary Section & Navodaya Entrance Parent Orientation
                                 </h4>
-                                <p class="text-xs text-slate-500">Discussion on student academic progress, SSC State Rank preparation strategy, and entrance guidance.</p>
+                                <p class="text-xs text-slate-500">Interactive session with Correspondent Bodla Satish regarding early childhood curriculum & entrance prep.</p>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                <!-- Right: Countdown Block -->
+                <!-- Event Countdown Card -->
                 <div class="lg:col-span-5">
                     <div class="bg-gradient-to-br from-navy-950 via-navy-900 to-slate-900 text-white rounded-3xl p-6 sm:p-8 border border-gold-500/30 shadow-2xl relative overflow-hidden">
                         <div class="inline-block px-3 py-1 bg-gold-500 text-navy-950 text-[10px] font-extrabold uppercase rounded-full mb-4">
@@ -907,10 +931,10 @@
                         </div>
 
                         <h3 class="font-serif text-2xl font-bold text-white mb-2">
-                            Annual Talent & Entrance Olympiad '26
+                            Annual 3-Campus Walkthrough & Admissions Drive '26
                         </h3>
                         <p class="text-xs text-slate-300 leading-relaxed mb-6">
-                            Navodaya, Sainik, IIT & NEET Foundation screening exam along with sports and cultural distributions at Nachupally campus.
+                            Guided campus tour across our Primary Campus, State Board High School, and A/C IIT-JEE & NEET Academy Campus.
                         </p>
 
                         <!-- Live Countdown Timer -->
@@ -933,8 +957,8 @@
                             </div>
                         </div>
 
-                        <button onclick="openToast('Olympiad Registration Confirmed!')" class="w-full py-3 bg-gradient-to-r from-gold-400 to-amber-600 text-navy-950 font-bold rounded-xl text-xs hover:scale-[1.02] transition-transform shadow-lg">
-                            Register Student for Entrance Olympiad
+                        <button onclick="openAdmissionModal()" class="w-full py-3 bg-gradient-to-r from-gold-400 to-amber-600 text-navy-950 font-bold rounded-xl text-xs hover:scale-[1.02] transition-transform shadow-lg">
+                            Register for Campus Visit & Admissions
                         </button>
                     </div>
                 </div>
@@ -950,10 +974,10 @@
                 <div class="space-y-2">
                     <span class="bg-navy-950 text-gold-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Admissions Open 2026-27</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-navy-950">
-                        Join Vasavi High School & Foundation Academy
+                        Enroll Your Child at Vasavi High School
                     </h2>
                     <p class="text-navy-900 text-sm max-w-xl font-medium">
-                        Admissions open Nursery to Class 10 (SSC) + IIT & NEET Foundation (Grades 6-10) and Navodaya & Sainik Coaching (Grades 5-6).
+                        Admissions open across our Primary Campus, State Board High School, and A/C IIT-JEE & NEET Campus in Nachupally, Jagtial.
                     </p>
                 </div>
                 <div class="flex flex-wrap gap-4 justify-center">
@@ -961,7 +985,7 @@
                         Apply Online Now
                     </button>
                     <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="px-6 py-4 bg-white/20 border border-navy-950/20 text-navy-950 hover:bg-white/30 font-bold text-sm rounded-2xl transition-all inline-flex items-center gap-2">
-                        <i class="fa-solid fa-map-location-dot"></i> Visit Nachupally Campus
+                        <i class="fa-solid fa-map-location-dot"></i> Visit Nachupally Campuses
                     </a>
                 </div>
             </div>
@@ -973,7 +997,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 
-                <!-- Col 1: Brand Info & Social Links -->
+                <!-- Col 1: Brand Info -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 rounded-xl bg-gold-500 text-navy-950 flex items-center justify-center font-bold text-lg">
@@ -982,17 +1006,17 @@
                         <span class="font-serif text-lg font-bold text-white tracking-wide">VASAVI HIGH SCHOOL</span>
                     </div>
                     <p class="text-slate-400 leading-relaxed text-xs">
-                        Recognized by Govt. of Telangana (SSC Board). Correspondent <strong class="text-slate-200">Bodla Satish</strong> (35+ Years Experience). Delivering State Top 3 SSC Ranks and outstanding Navodaya results.
+                        Recognized by Govt. of Telangana. Correspondent <strong class="text-slate-200">Bodla Satish</strong> (35+ Years Experience). Featuring 3 specialized campuses: Primary Campus, State Board High School, and Air-Conditioned IIT-JEE / NEET Academy Campus.
                     </p>
                     
-                    <!-- Official Social & Map Links -->
+                    <!-- Social Icons -->
                     <div class="pt-2">
                         <span class="block text-[11px] font-semibold text-slate-300 mb-2 uppercase tracking-wider">Connect With Us:</span>
                         <div class="flex items-center gap-3">
                             <a href="https://www.instagram.com/vasavi_high_school_nachupally?igsh=MTQzNDdvbHVlbnI4bA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg" title="Official Instagram Page">
                                 <i class="fa-brands fa-instagram text-lg"></i>
                             </a>
-                            <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg" title="Google Maps Campus Location">
+                            <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg" title="Google Maps Location">
                                 <i class="fa-solid fa-map-location-dot text-base"></i>
                             </a>
                             <a href="https://wa.me/919440289447" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-green-600 text-white flex items-center justify-center hover:scale-110 transition-transform shadow-lg" title="WhatsApp Admissions Office">
@@ -1002,37 +1026,35 @@
                     </div>
                 </div>
 
-                <!-- Col 2: Academic Programs -->
+                <!-- Col 2: The 3 Campuses -->
                 <div class="space-y-3">
-                    <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Academic Programs</h4>
+                    <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Our 3 Campuses</h4>
                     <ul class="space-y-2">
-                        <li><a href="#special-coaching" class="hover:text-gold-400 transition-colors text-gold-400 font-medium">IIT & NEET Foundation (6th-10th)</a></li>
-                        <li><a href="#special-coaching" class="hover:text-teal-400 transition-colors text-teal-400 font-medium">Navodaya & Sainik Prep (5th-6th)</a></li>
-                        <li><a href="#wings" class="hover:text-gold-400 transition-colors">Pre-Primary (Nursery - UKG)</a></li>
-                        <li><a href="#wings" class="hover:text-gold-400 transition-colors">Primary Wing (Classes 1 - 5)</a></li>
-                        <li><a href="#wings" class="hover:text-gold-400 transition-colors">Telangana SSC High School</a></li>
+                        <li><a href="#campus-jee" class="hover:text-cyan-400 transition-colors text-cyan-300 font-bold flex items-center gap-1.5"><i class="fa-solid fa-snowflake text-[10px]"></i> 1. A/C IIT-JEE & NEET Campus</a></li>
+                        <li><a href="#campus-state" class="hover:text-amber-400 transition-colors text-amber-300 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-award text-[10px]"></i> 2. State Board High School</a></li>
+                        <li><a href="#campus-primary" class="hover:text-teal-400 transition-colors text-teal-300 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-child text-[10px]"></i> 3. Primary Section Campus</a></li>
+                        <li><a href="#special-coaching" class="hover:text-gold-400 transition-colors text-slate-300">Navodaya & Sainik Wing</a></li>
                     </ul>
                 </div>
 
-                <!-- Col 3: Key Stats & Leadership -->
+                <!-- Col 3: Key Details & Leadership -->
                 <div class="space-y-3">
-                    <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">School Leadership</h4>
+                    <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Leadership & Features</h4>
                     <ul class="space-y-2">
                         <li><span class="text-slate-300 font-semibold">Correspondent:</span> Bodla Satish</li>
-                        <li><span class="text-slate-300 font-semibold">Experience:</span> 35+ Years in Education</li>
-                        <li><span class="text-slate-300 font-semibold">SSC Results:</span> State & District Top 3 Ranks</li>
-                        <li><span class="text-slate-300 font-semibold">Navodaya Record:</span> 2 Seats / 10 Applied (2025)</li>
-                        <li><span class="text-slate-300 font-semibold">Faculty:</span> 60+ Staff Members</li>
+                        <li><span class="text-slate-300 font-semibold">Leadership:</span> 35+ Years Experience</li>
+                        <li><span class="text-slate-300 font-semibold">A/C Classrooms:</span> IIT/NEET Foundation</li>
+                        <li><span class="text-slate-300 font-semibold">SSC Record:</span> State & District Top Ranks</li>
                     </ul>
                 </div>
 
-                <!-- Col 4: Campus Contact & Maps -->
+                <!-- Col 4: Contact & Location -->
                 <div class="space-y-3">
-                    <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Campus Location</h4>
+                    <h4 class="font-bold text-white uppercase tracking-wider text-xs border-b border-slate-800 pb-2">Location & Phone</h4>
                     <ul class="space-y-2 text-slate-400">
                         <li class="flex items-start gap-2">
                             <i class="fa-solid fa-location-dot text-gold-500 mt-0.5"></i>
-                            <span>Vasavi High School, H.No. 6-12, Nachupally Village, Jagtial District, Telangana - 505501</span>
+                            <span>Vasavi High School, Nachupally Village, Jagtial District, Telangana - 505501</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fa-solid fa-phone text-gold-500"></i>
@@ -1044,7 +1066,7 @@
                         </li>
                         <li class="pt-2">
                             <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 border border-slate-700 hover:border-gold-500 text-gold-400 rounded-lg font-medium transition-colors">
-                                <i class="fa-solid fa-directions"></i> Open in Google Maps
+                                <i class="fa-solid fa-directions"></i> Open Google Maps
                             </a>
                         </li>
                     </ul>
@@ -1062,16 +1084,15 @@
                     <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 flex items-center gap-1">
                         <i class="fa-solid fa-map-pin"></i> Google Maps
                     </a>
-                    <a href="#" onclick="openToast('Privacy Policy')" class="hover:text-slate-300">Privacy Policy</a>
                 </div>
             </div>
         </div>
     </footer>
 
     
-    <!-- Modals & Overlays -->
+    <!-- Modals -->
 
-    <!-- 1. Admission Inquiry Modal -->
+    <!-- 1. Admission Inquiry Modal (Updated with 3 Campuses) -->
     <div id="admission-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 transform scale-95 transition-transform duration-300 relative overflow-hidden">
             <button onclick="closeAdmissionModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center">
@@ -1079,9 +1100,9 @@
             </button>
 
             <div class="space-y-2 mb-6">
-                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest bg-gold-500/10 px-2.5 py-0.5 rounded">Admissions 2026-27 • Telangana SSC Board</span>
+                <span class="text-xs font-bold text-gold-600 uppercase tracking-widest bg-gold-500/10 px-2.5 py-0.5 rounded">Admissions 2026-27</span>
                 <h3 class="font-serif text-2xl font-bold text-navy-900">Admission Inquiry Form</h3>
-                <p class="text-xs text-slate-500">Select your desired program including IIT-NEET & Navodaya-Sainik batches.</p>
+                <p class="text-xs text-slate-500">Select your preferred campus and academic stream at Vasavi High School.</p>
             </div>
 
             <form onsubmit="handleInquirySubmit(event)" class="space-y-4">
@@ -1101,21 +1122,19 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Course / Class Seeking *</label>
-                        <select id="grade-select" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
-                            <option value="Navodaya-Sainik">Classes 5-6 + Navodaya & Sainik Prep</option>
-                            <option value="IIT-NEET">Classes 6-10 + Integrated IIT/NEET</option>
-                            <option value="Pre-Primary">Pre-Primary (Nursery - UKG)</option>
-                            <option value="Primary (1-5)">Primary (Classes 1 - 5 Regular)</option>
-                            <option value="High School (8-10)">High School SSC (Regular)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-bold text-slate-700 mb-1">Child's Name</label>
-                        <input type="text" placeholder="Student Full Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
-                    </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Select Campus / Program *</label>
+                    <select id="grade-select" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                        <option value="IIT-NEET">Air-Conditioned IIT-JEE & NEET Campus (Grades 6-10)</option>
+                        <option value="High School">State Board High School Campus (Grades 6-10 SSC)</option>
+                        <option value="Primary">Primary Section Campus (Nursery - Class 5)</option>
+                        <option value="Navodaya-Sainik">Navodaya & Sainik School Entrance Wing</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Student's Name</label>
+                    <input type="text" placeholder="Child's Full Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                 </div>
 
                 <button type="submit" class="w-full py-3 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-navy-950 font-bold text-xs rounded-xl shadow-lg hover:opacity-95 transition-opacity">
@@ -1125,7 +1144,7 @@
         </div>
     </div>
 
-    <!-- 2. Tour Booking Modal -->
+    <!-- 2. Campus Visit Tour Booking Modal -->
     <div id="tour-modal" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 relative">
             <button onclick="closeTourModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center">
@@ -1133,13 +1152,13 @@
             </button>
 
             <div class="space-y-2 mb-4">
-                <h3 class="font-serif text-xl font-bold text-navy-900">Visit Nachupally Campus</h3>
-                <p class="text-xs text-slate-500">Select your preferred date to visit Vasavi High School, Jagtial.</p>
+                <h3 class="font-serif text-xl font-bold text-navy-900">Visit Nachupally Campuses</h3>
+                <p class="text-xs text-slate-500">Schedule a visit to inspect our Primary, State Board, or A/C IIT-JEE Campuses.</p>
             </div>
 
             <form onsubmit="handleTourSubmit(event)" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-bold text-slate-700 mb-1">Your Full Name *</label>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Your Name *</label>
                     <input type="text" required placeholder="Parent Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                 </div>
                 <div>
@@ -1157,21 +1176,7 @@
         </div>
     </div>
 
-    <!-- 3. Video Modal -->
-    <div id="video-modal" class="fixed inset-0 z-50 bg-navy-950/90 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="max-w-3xl w-full bg-black rounded-3xl overflow-hidden shadow-2xl relative">
-            <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/40">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="aspect-video bg-navy-900 flex flex-col items-center justify-center p-8 text-center">
-                <i class="fa-solid fa-circle-play text-gold-400 text-6xl mb-4 animate-pulse"></i>
-                <h3 class="font-serif text-xl font-bold text-white mb-2">Vasavi High School, Nachupally</h3>
-                <p class="text-xs text-slate-400 max-w-md">Correspondent Bodla Satish (35+ Years Experience) • Telangana SSC | State Ranks | Navodaya Achievers</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 4. Global Search Modal -->
+    <!-- 3. Global Search Modal -->
     <div id="search-modal" class="fixed inset-0 z-50 bg-navy-950/90 backdrop-blur-lg flex items-start justify-center pt-20 p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="max-w-2xl w-full bg-navy-900 border border-slate-800 rounded-3xl p-6 shadow-2xl relative">
             <button onclick="toggleSearchModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white">
@@ -1179,169 +1184,77 @@
             </button>
             <div class="relative mb-4">
                 <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                <input type="text" id="search-input" placeholder="Search Bodla Satish, Navodaya results, State top ranks, IIT NEET foundation..." class="w-full bg-navy-950 text-white placeholder-slate-500 pl-11 pr-4 py-3.5 rounded-2xl border border-slate-800 focus:outline-none focus:border-gold-500 text-sm">
+                <input type="text" id="search-input" placeholder="Search primary campus, state board, AC IIT JEE campus, Bodla Satish..." class="w-full bg-navy-950 text-white placeholder-slate-500 pl-11 pr-4 py-3.5 rounded-2xl border border-slate-800 focus:outline-none focus:border-gold-500 text-sm">
             </div>
             <div class="text-xs text-slate-400 space-y-2">
-                <span class="font-semibold text-slate-300">Popular Searches:</span>
+                <span class="font-semibold text-slate-300">Quick Search:</span>
                 <div class="flex flex-wrap gap-2 pt-1">
-                    <button onclick="quickSearch('Bodla Satish')" class="px-2.5 py-1 bg-white/5 hover:bg-gold-500 hover:text-navy-950 rounded-lg">Correspondent Bodla Satish</button>
-                    <button onclick="quickSearch('Navodaya')" class="px-2.5 py-1 bg-white/5 hover:bg-teal-500 hover:text-navy-950 rounded-lg">Navodaya 2 Seats Result</button>
-                    <button onclick="quickSearch('Top Ranks')" class="px-2.5 py-1 bg-white/5 hover:bg-amber-500 hover:text-navy-950 rounded-lg">State & District SSC Ranks</button>
-                    <button onclick="quickSearch('IIT NEET')" class="px-2.5 py-1 bg-white/5 hover:bg-gold-500 hover:text-navy-950 rounded-lg">IIT & NEET Foundation</button>
+                    <button onclick="quickSearch('A/C IIT JEE Campus')" class="px-2.5 py-1 bg-white/5 hover:bg-cyan-500 hover:text-navy-950 rounded-lg">A/C IIT JEE Campus</button>
+                    <button onclick="quickSearch('State Board Campus')" class="px-2.5 py-1 bg-white/5 hover:bg-amber-500 hover:text-navy-950 rounded-lg">State Board Campus</button>
+                    <button onclick="quickSearch('Primary Campus')" class="px-2.5 py-1 bg-white/5 hover:bg-teal-500 hover:text-navy-950 rounded-lg">Primary Campus</button>
+                    <button onclick="quickSearch('Bodla Satish')" class="px-2.5 py-1 bg-white/5 hover:bg-gold-500 hover:text-navy-950 rounded-lg">Bodla Satish</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 5. Toast Notification -->
+    <!-- Toast Notification -->
     <div id="toast-notification" class="fixed bottom-6 right-6 z-50 bg-navy-900 border border-gold-500/40 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300">
         <i class="fa-solid fa-circle-check text-gold-400 text-lg"></i>
-        <span id="toast-message" class="text-xs font-semibold">Notification Message</span>
+        <span id="toast-message" class="text-xs font-semibold">Notification</span>
     </div>
 
     <script>
-        // --- Accessibility Font Scaling Controls ---
-        let currentFontScale = 0;
-        function changeFontSize(direction) {
-            currentFontScale += direction;
-            if (currentFontScale < -2) currentFontScale = -2;
-            if (currentFontScale > 3) currentFontScale = 3;
-            document.documentElement.style.fontSize = (16 + (currentFontScale * 1.5)) + 'px';
-            openToast(`Font size scaled ${currentFontScale > 0 ? '+' : ''}${currentFontScale}`);
-        }
-        function resetFontSize() {
-            currentFontScale = 0;
-            document.documentElement.style.fontSize = '16px';
-            openToast('Font size reset');
-        }
-
-        // --- Mobile Drawer Toggle ---
-        function toggleMobileDrawer() {
-            const drawer = document.getElementById('mobile-drawer');
-            const drawerContent = document.getElementById('mobile-drawer-content');
-            const isHidden = drawer.classList.contains('opacity-0');
-
-            if (isHidden) {
-                drawer.classList.remove('opacity-0', 'pointer-events-none');
-                drawerContent.classList.remove('translate-x-full');
-            } else {
-                drawer.classList.add('opacity-0', 'pointer-events-none');
-                drawerContent.classList.add('translate-x-full');
-            }
-        }
-
-        // --- Toast Notification Handler ---
-        function openToast(message) {
-            const toast = document.getElementById('toast-notification');
-            const toastMsg = document.getElementById('toast-message');
-            toastMsg.textContent = message;
-            
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3500);
-        }
-
-        // --- Admissions Inquiry Modal logic ---
-        function openAdmissionModal(wing = null) {
-            const modal = document.getElementById('admission-modal');
-            const select = document.getElementById('grade-select');
-            
-            if (wing) {
-                if (wing === 'IIT-NEET') select.value = 'IIT-NEET';
-                if (wing === 'Navodaya-Sainik') select.value = 'Navodaya-Sainik';
-                if (wing === 'Pre-Primary') select.value = 'Pre-Primary';
-                if (wing === 'Primary') select.value = 'Primary (1-5)';
-            }
-
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            modal.querySelector('div').classList.remove('scale-95');
-        }
-        function closeAdmissionModal() {
-            const modal = document.getElementById('admission-modal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            modal.querySelector('div').classList.add('scale-95');
-        }
-        function handleInquirySubmit(e) {
-            e.preventDefault();
-            closeAdmissionModal();
-            openToast('Inquiry Submitted! Correspondent Bodla Satish & admissions office will contact you shortly.');
-        }
-
-        // --- Campus Tour Modal ---
-        function openTourModal() {
-            const modal = document.getElementById('tour-modal');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-        }
-        function closeTourModal() {
-            const modal = document.getElementById('tour-modal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-        }
-        function handleTourSubmit(e) {
-            e.preventDefault();
-            closeTourModal();
-            openToast('Campus Visit Request Confirmed! Our Nachupally team looks forward to receiving you.');
-        }
-
-        // --- Video Modal ---
-        function openVideoModal() {
-            const modal = document.getElementById('video-modal');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-        }
-        function closeVideoModal() {
-            const modal = document.getElementById('video-modal');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        // --- Global Search Overlay ---
-        function toggleSearchModal() {
-            const modal = document.getElementById('search-modal');
-            const isHidden = modal.classList.contains('opacity-0');
-            if (isHidden) {
-                modal.classList.remove('opacity-0', 'pointer-events-none');
-                document.getElementById('search-input').focus();
-            } else {
-                modal.classList.add('opacity-0', 'pointer-events-none');
-            }
-        }
-        function quickSearch(term) {
-            document.getElementById('search-input').value = term;
-            openToast(`Searching for "${term}"...`);
-            setTimeout(() => {
-                toggleSearchModal();
-            }, 800);
-        }
-
-        // --- Campus Tab Switching Logic ---
+        // Campus Facility Tab Switcher Data
         const campusData = {
+            ac: {
+                category: "100% Air-Conditioned Campus",
+                title: "Dedicated A/C IIT-JEE & NEET Campus",
+                desc: "Our exclusive Air-Conditioned campus provides a dust-free, climate-controlled environment tailored for high school STEM students, enabling endurance and focus during intensive IIT-JEE & NEET foundation sessions.",
+                img: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80",
+                highlights: [
+                    '<i class="fa-solid fa-snowflake text-cyan-400 mr-2"></i>Fully Air-Conditioned Classrooms',
+                    '<i class="fa-solid fa-atom text-cyan-400 mr-2"></i>Integrated IIT/NEET Competitive Syllabus'
+                ]
+            },
+            transport: {
+                category: "Safe & Dedicated Commute Fleet",
+                title: "5 School Bus Transport Fleet Network",
+                desc: "Vasavi High School operates a fleet of 5 well-maintained school buses covering Jagtial town, Nachupally, and surrounding rural routes. Drivers and attendants ensure safe, punctual daily pickup and drop-off for our 1,200+ students.",
+                img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80",
+                highlights: [
+                    '<i class="fa-solid fa-bus text-emerald-400 mr-2"></i>5 Fleet Buses Covering Jagtial & Nachupally Routes',
+                    '<i class="fa-solid fa-shield-halved text-emerald-400 mr-2"></i>Safety-First Student Commute Network'
+                ]
+            },
+            state: {
+                category: "Higher Classes SSC Campus",
+                title: "State Board High School Campus",
+                desc: "Our dedicated high school campus for Classes 6 to 10 SSC Board. Houses subject-specialist mentors, rigorous Telangana board revision programs, and an outstanding record of top state and district ranks.",
+                img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+                highlights: [
+                    '<i class="fa-solid fa-award text-amber-400 mr-2"></i>Telangana SSC State & District Top Ranks',
+                    '<i class="fa-solid fa-chalkboard-user text-amber-400 mr-2"></i>Senior High School Board Faculty'
+                ]
+            },
+            primary: {
+                category: "Primary Section Campus",
+                title: "Nurturing Primary Section Campus (Nursery - 5th)",
+                desc: "A separate, safe, and engaging primary campus designed for young learners. Features play-based sensory learning, activity rooms, elementary STEM fundamentals, and specialized Navodaya/Sainik coaching.",
+                img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+                highlights: [
+                    '<i class="fa-solid fa-child text-teal-400 mr-2"></i>Child-Centric Safe Campus',
+                    '<i class="fa-solid fa-shield-halved text-teal-400 mr-2"></i>Navodaya & Sainik School Entrance Prep'
+                ]
+            },
             labs: {
-                category: "Practical Learning",
+                category: "Science & Technology",
                 title: "Equipped Science & Computer Laboratories",
-                desc: "Our science and computer labs give students hands-on exposure to practical physics, chemistry, biology, and computer literacy under guidance of expert faculty.",
+                desc: "Equipped laboratories enabling physics, chemistry, biology, and computer literacy sessions across our high school campuses under expert faculty guidance.",
                 img: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
                 highlights: [
-                    '<i class="fa-solid fa-laptop text-teal-400 mr-2"></i>Computer Lab with Internet',
-                    '<i class="fa-solid fa-flask text-teal-400 mr-2"></i>Physics & Bio Apparatus'
-                ]
-            },
-            sports: {
-                category: "Physical Fitness & Sports",
-                title: "Spacious Playground & Athletic Sports",
-                desc: "Spacious playground at Nachupally campus for volleyball, kabaddi, kho-kho, cricket, running, and physical fitness activities under regular sports guidance.",
-                img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80",
-                highlights: [
-                    '<i class="fa-solid fa-volleyball text-gold-400 mr-2"></i>Volleyball & Athletic Track',
-                    '<i class="fa-solid fa-trophy text-gold-400 mr-2"></i>Inter-School Tournaments'
-                ]
-            },
-            library: {
-                category: "Resource Center",
-                title: "School Library & Competitive Entrance Corner",
-                desc: "Equipped with Telangana SSC textbooks, IIT/NEET foundation guides, Navodaya & Sainik entrance practice question banks, and children's literature.",
-                img: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80",
-                highlights: [
-                    '<i class="fa-solid fa-book-bookmark text-teal-400 mr-2"></i>IIT/NEET/Navodaya Guides',
-                    '<i class="fa-solid fa-newspaper text-teal-400 mr-2"></i>Daily Regional & English Papers'
+                    '<i class="fa-solid fa-laptop text-gold-400 mr-2"></i>High-Speed Computer Workstations',
+                    '<i class="fa-solid fa-flask text-gold-400 mr-2"></i>Practical Science Experiment Kits'
                 ]
             }
         };
@@ -1372,7 +1285,7 @@
             }, 200);
         }
 
-        // --- Live Event Countdown Timer ---
+        // Live Countdown Timer
         function startCountdown() {
             let days = 18, hours = 9, minutes = 42, seconds = 15;
             setInterval(() => {
