@@ -1,0 +1,153 @@
+{
+  "entities": {
+    "AdmissionInquiry": {
+      "title": "AdmissionInquiry",
+      "description": "Parent/student admission inquiry submitted on the school website",
+      "type": "object",
+      "properties": {
+        "parentName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Name of parent or guardian"
+        },
+        "mobileNumber": {
+          "type": "string",
+          "minLength": 7,
+          "maxLength": 20,
+          "pattern": "^[+0-9\\s\\-()]{7,20}$",
+          "description": "Parent contact mobile number"
+        },
+        "villageOrTown": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Village or town of residence"
+        },
+        "program": {
+          "type": "string",
+          "enum": ["IIT-NEET", "High School", "Primary", "Navodaya-Sainik"],
+          "maxLength": 30,
+          "description": "Selected campus or academic program"
+        },
+        "studentName": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100,
+          "description": "Optional child full name"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "contacted", "enrolled", "archived"],
+          "maxLength": 20,
+          "description": "Inquiry follow-up status"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of inquiry submission"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last update"
+        }
+      },
+      "required": [
+        "parentName",
+        "mobileNumber",
+        "villageOrTown",
+        "program",
+        "studentName",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "CampusVisit": {
+      "title": "CampusVisit",
+      "description": "Scheduled campus visit booking from a parent or guardian",
+      "type": "object",
+      "properties": {
+        "visitorName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Name of parent or visitor"
+        },
+        "contactNumber": {
+          "type": "string",
+          "minLength": 7,
+          "maxLength": 20,
+          "pattern": "^[+0-9\\s\\-()]{7,20}$",
+          "description": "Visitor contact phone number"
+        },
+        "preferredDate": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10,
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+          "description": "Preferred visit date in YYYY-MM-DD format"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["scheduled", "completed", "cancelled"],
+          "maxLength": 20,
+          "description": "Visit booking status"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of visit booking"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of last update"
+        }
+      },
+      "required": [
+        "visitorName",
+        "contactNumber",
+        "preferredDate",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized school staff/admin account document",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "minLength": 3,
+          "maxLength": 120,
+          "description": "Verified Google email address of the admin"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when admin was added"
+        }
+      },
+      "required": ["email", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/admissionInquiries/{inquiryId}": {
+      "schema": { "$ref": "#/entities/AdmissionInquiry" },
+      "description": "Parent and student admission inquiries"
+    },
+    "/campusVisits/{visitId}": {
+      "schema": { "$ref": "#/entities/CampusVisit" },
+      "description": "Scheduled campus visit requests"
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminUser" },
+      "description": "School admin users permitted to read and manage inquiries and visits"
+    }
+  }
+}

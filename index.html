@@ -1087,6 +1087,9 @@
                     <a href="https://maps.google.com/?cid=4727122607237488296" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 flex items-center gap-1">
                         <i class="fa-solid fa-map-pin"></i> Google Maps
                     </a>
+                    <button onclick="openAdminModal()" class="hover:text-gold-400 flex items-center gap-1 transition-colors">
+                        <i class="fa-solid fa-database"></i> Admin Portal
+                    </button>
                 </div>
             </div>
         </div>
@@ -1111,17 +1114,17 @@
             <form onsubmit="handleInquirySubmit(event)" class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Parent / Guardian Name *</label>
-                    <input type="text" required placeholder="e.g. Srinivas Rao" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                    <input id="inquiry-parent-name" type="text" required maxlength="100" placeholder="e.g. Srinivas Rao" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                 </div>
 
                 <div class="grid grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Mobile Number *</label>
-                        <input type="tel" required placeholder="+91 94402 89447" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                        <input id="inquiry-mobile" type="tel" required minlength="7" maxlength="20" pattern="^[+0-9\s\-()]{7,20}$" placeholder="+91 94402 89447" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                     </div>
                     <div>
                         <label class="block text-xs font-bold text-slate-700 mb-1">Village / Town *</label>
-                        <input type="text" required placeholder="e.g. Jagtial / Nachupally" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                        <input id="inquiry-village" type="text" required maxlength="100" placeholder="e.g. Jagtial / Nachupally" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                     </div>
                 </div>
 
@@ -1137,10 +1140,10 @@
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Student's Name</label>
-                    <input type="text" placeholder="Child's Full Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                    <input id="inquiry-student-name" type="text" maxlength="100" placeholder="Child's Full Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                 </div>
 
-                <button type="submit" class="w-full py-3 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-navy-950 font-bold text-xs rounded-xl shadow-lg hover:opacity-95 transition-opacity">
+                <button id="inquiry-submit-btn" type="submit" class="w-full py-3 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-navy-950 font-bold text-xs rounded-xl shadow-lg hover:opacity-95 transition-opacity">
                     Submit Admission Inquiry
                 </button>
             </form>
@@ -1162,17 +1165,17 @@
             <form onsubmit="handleTourSubmit(event)" class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Your Name *</label>
-                    <input type="text" required placeholder="Parent Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                    <input id="visit-name" type="text" required maxlength="100" placeholder="Parent Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Contact Number *</label>
-                    <input type="tel" required placeholder="+91 94402 89447" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                    <input id="visit-mobile" type="tel" required minlength="7" maxlength="20" pattern="^[+0-9\s\-()]{7,20}$" placeholder="+91 94402 89447" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Date *</label>
-                    <input type="date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
+                    <input id="visit-date" type="date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-gold-500 focus:outline-none">
                 </div>
-                <button type="submit" class="w-full py-3 bg-navy-950 text-gold-400 font-bold text-xs rounded-xl shadow-lg hover:bg-navy-900 transition-colors">
+                <button id="visit-submit-btn" type="submit" class="w-full py-3 bg-navy-950 text-gold-400 font-bold text-xs rounded-xl shadow-lg hover:bg-navy-900 transition-colors">
                     Confirm Visit Booking
                 </button>
             </form>
@@ -1201,12 +1204,86 @@
         </div>
     </div>
 
+    <!-- 4. Admin Admissions & Visits Portal Modal -->
+    <div id="admin-modal" class="fixed inset-0 z-50 bg-navy-950/85 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-navy-900 border border-gold-500/30 rounded-3xl max-w-4xl w-full max-h-[88vh] flex flex-col shadow-2xl overflow-hidden text-white">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-navy-950">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-lg font-bold text-white">Admissions &amp; Visits Database</h3>
+                        <p id="admin-user-label" class="text-[11px] text-slate-400">Authorized school staff access</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="admin-signout-btn" onclick="handleAdminSignOut()" class="hidden px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs text-slate-300 border border-slate-700">
+                        Sign Out
+                    </button>
+                    <button onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white flex items-center justify-center">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-6 overflow-y-auto custom-scrollbar flex-1">
+                <!-- Signed Out View -->
+                <div id="admin-auth-view" class="py-10 text-center space-y-4 max-w-md mx-auto">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-500/15 text-gold-400 mx-auto flex items-center justify-center text-2xl border border-gold-500/30">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="font-serif text-xl font-bold text-white">Staff Sign In Required</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Parent inquiries and campus visit bookings are safely stored in Firestore. Sign in with your authorized Google account to view and manage submissions.
+                    </p>
+                    <button onclick="handleAdminSignIn()" class="px-6 py-3 bg-gradient-to-r from-gold-400 via-gold-500 to-amber-600 text-navy-950 font-bold text-xs rounded-xl shadow-lg hover:opacity-95 transition-opacity inline-flex items-center gap-2">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Sign in with Google</span>
+                    </button>
+                </div>
+
+                <!-- Unauthorized View -->
+                <div id="admin-denied-view" class="hidden py-10 text-center space-y-3 max-w-md mx-auto">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-400 mx-auto flex items-center justify-center text-xl border border-rose-500/30">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h4 class="font-serif text-lg font-bold text-white">Admin Access Restricted</h4>
+                    <p class="text-xs text-slate-300">
+                        This Google account does not have permission to view student/parent inquiries. Please sign out and sign in with the school admin account.
+                    </p>
+                </div>
+
+                <!-- Dashboard View -->
+                <div id="admin-dashboard-view" class="hidden space-y-4">
+                    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                        <div class="flex gap-2">
+                            <button id="admin-tab-inquiries" onclick="switchAdminTab('inquiries')" class="px-4 py-2 rounded-xl text-xs font-bold bg-gold-500 text-navy-950">
+                                Admission Inquiries (<span id="inquiries-count">0</span>)
+                            </button>
+                            <button id="admin-tab-visits" onclick="switchAdminTab('visits')" class="px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:text-white">
+                                Campus Visits (<span id="visits-count">0</span>)
+                            </button>
+                        </div>
+                        <span class="text-[11px] text-emerald-400 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Firestore Sync
+                        </span>
+                    </div>
+
+                    <div id="admin-inquiries-list" class="space-y-3"></div>
+                    <div id="admin-visits-list" class="hidden space-y-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Toast Notification -->
     <div id="toast-notification" class="fixed bottom-6 right-6 z-50 bg-navy-900 border border-gold-500/40 text-white px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-300">
         <i class="fa-solid fa-circle-check text-gold-400 text-lg"></i>
         <span id="toast-message" class="text-xs font-semibold">Notification</span>
     </div>
 
+    <script type="module" src="./firebase-client.js"></script>
     <script>
         // Campus Facility Tab Switcher Data
         const campusData = {
@@ -1379,14 +1456,42 @@
             }
         }
 
-        function handleInquirySubmit(event) {
+        async function handleInquirySubmit(event) {
             event.preventDefault();
             const form = event.target;
+            const submitBtn = document.getElementById('inquiry-submit-btn');
             const programSelect = document.getElementById('grade-select');
+            const program = programSelect ? programSelect.value : 'IIT-NEET';
             const programName = programSelect ? programSelect.options[programSelect.selectedIndex].text : 'selected campus';
-            form.reset();
-            closeAdmissionModal();
-            openToast(`Admission inquiry received for ${programName}. We will contact you shortly!`);
+
+            const payload = {
+                parentName: document.getElementById('inquiry-parent-name')?.value || '',
+                mobileNumber: document.getElementById('inquiry-mobile')?.value || '',
+                villageOrTown: document.getElementById('inquiry-village')?.value || '',
+                program,
+                studentName: document.getElementById('inquiry-student-name')?.value || ''
+            };
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Saving to Database...';
+            }
+
+            try {
+                if (!window.vhsFirebase) throw new Error('Database service is still loading. Please try again.');
+                await window.vhsFirebase.saveAdmissionInquiry(payload);
+                form.reset();
+                closeAdmissionModal();
+                openToast(`Admission inquiry saved for ${programName}. Our office will contact you shortly!`);
+            } catch (err) {
+                console.error(err);
+                openToast(err?.message?.startsWith('{') ? 'Could not save inquiry. Please check your details and try again.' : (err?.message || 'Failed to save inquiry.'));
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Admission Inquiry';
+                }
+            }
         }
 
         // Campus Visit Tour Modal
@@ -1404,12 +1509,303 @@
             modal.classList.remove('opacity-100', 'pointer-events-auto');
         }
 
-        function handleTourSubmit(event) {
+        async function handleTourSubmit(event) {
             event.preventDefault();
-            event.target.reset();
-            closeTourModal();
-            openToast('Campus visit scheduled! Our team in Nachupally looks forward to welcoming you.');
+            const form = event.target;
+            const submitBtn = document.getElementById('visit-submit-btn');
+
+            const payload = {
+                visitorName: document.getElementById('visit-name')?.value || '',
+                contactNumber: document.getElementById('visit-mobile')?.value || '',
+                preferredDate: document.getElementById('visit-date')?.value || ''
+            };
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Saving Booking...';
+            }
+
+            try {
+                if (!window.vhsFirebase) throw new Error('Database service is still loading. Please try again.');
+                await window.vhsFirebase.saveCampusVisit(payload);
+                form.reset();
+                closeTourModal();
+                openToast('Campus visit booked and saved! Our Nachupally team looks forward to welcoming you.');
+            } catch (err) {
+                console.error(err);
+                openToast(err?.message?.startsWith('{') ? 'Could not save booking. Please check your details and try again.' : (err?.message || 'Failed to save booking.'));
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Confirm Visit Booking';
+                }
+            }
         }
+
+        // Admin Portal Modal & Live Firestore Listeners
+        let unsubInquiries = null;
+        let unsubVisits = null;
+        let activeAdminTab = 'inquiries';
+
+        function stopAdminListeners() {
+            if (unsubInquiries) { unsubInquiries(); unsubInquiries = null; }
+            if (unsubVisits) { unsubVisits(); unsubVisits = null; }
+        }
+
+        function openAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            if (!modal) return;
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100', 'pointer-events-auto');
+            syncAdminPortalState();
+        }
+
+        function closeAdminModal() {
+            const modal = document.getElementById('admin-modal');
+            if (!modal) return;
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-100', 'pointer-events-auto');
+            stopAdminListeners();
+        }
+
+        function switchAdminTab(tab) {
+            activeAdminTab = tab;
+            const inqTab = document.getElementById('admin-tab-inquiries');
+            const visTab = document.getElementById('admin-tab-visits');
+            const inqList = document.getElementById('admin-inquiries-list');
+            const visList = document.getElementById('admin-visits-list');
+
+            if (tab === 'inquiries') {
+                inqTab.className = 'px-4 py-2 rounded-xl text-xs font-bold bg-gold-500 text-navy-950';
+                visTab.className = 'px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:text-white';
+                inqList.classList.remove('hidden');
+                visList.classList.add('hidden');
+            } else {
+                visTab.className = 'px-4 py-2 rounded-xl text-xs font-bold bg-gold-500 text-navy-950';
+                inqTab.className = 'px-4 py-2 rounded-xl text-xs font-bold bg-white/5 text-slate-300 hover:text-white';
+                visList.classList.remove('hidden');
+                inqList.classList.add('hidden');
+            }
+        }
+
+        function formatTimestamp(ts) {
+            if (!ts || typeof ts.toDate !== 'function') return 'Just now';
+            return ts.toDate().toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' });
+        }
+
+        function renderInquiriesList(items) {
+            const container = document.getElementById('admin-inquiries-list');
+            const countEl = document.getElementById('inquiries-count');
+            if (countEl) countEl.textContent = String(items.length);
+            if (!container) return;
+
+            container.replaceChildren();
+            if (items.length === 0) {
+                const empty = document.createElement('p');
+                empty.className = 'text-xs text-slate-400 py-8 text-center';
+                empty.textContent = 'No admission inquiries submitted yet.';
+                container.appendChild(empty);
+                return;
+            }
+
+            items.forEach((item) => {
+                const card = document.createElement('div');
+                card.className = 'p-4 rounded-2xl bg-navy-950 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4';
+
+                const info = document.createElement('div');
+                info.className = 'space-y-1';
+
+                const title = document.createElement('div');
+                title.className = 'text-sm font-bold text-white';
+                title.textContent = item.parentName + (item.studentName ? ` (Student: ${item.studentName})` : '');
+
+                const meta = document.createElement('div');
+                meta.className = 'text-xs text-slate-300';
+                meta.textContent = `${item.program} • ${item.mobileNumber} • ${item.villageOrTown}`;
+
+                const time = document.createElement('div');
+                time.className = 'text-[11px] text-slate-500';
+                time.textContent = `Submitted: ${formatTimestamp(item.createdAt)}`;
+
+                info.append(title, meta, time);
+
+                const actions = document.createElement('div');
+                actions.className = 'flex items-center gap-2 shrink-0';
+
+                const select = document.createElement('select');
+                select.className = 'bg-navy-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white';
+                ['new', 'contacted', 'enrolled', 'archived'].forEach((st) => {
+                    const opt = document.createElement('option');
+                    opt.value = st;
+                    opt.textContent = st.charAt(0).toUpperCase() + st.slice(1);
+                    if (item.status === st) opt.selected = true;
+                    select.appendChild(opt);
+                });
+                select.disabled = item.status === 'archived';
+                select.addEventListener('change', async () => {
+                    try {
+                        await window.vhsFirebase.updateInquiryStatus(item.id, select.value);
+                        openToast(`Inquiry marked as ${select.value}`);
+                    } catch (err) {
+                        openToast('Failed to update status');
+                    }
+                });
+
+                const delBtn = document.createElement('button');
+                delBtn.className = 'px-2.5 py-1.5 rounded-lg bg-rose-500/15 hover:bg-rose-500/30 text-rose-300 text-xs';
+                delBtn.textContent = 'Delete';
+                delBtn.addEventListener('click', async () => {
+                    try {
+                        await window.vhsFirebase.deleteInquiry(item.id);
+                        openToast('Inquiry deleted');
+                    } catch (err) {
+                        openToast('Failed to delete inquiry');
+                    }
+                });
+
+                actions.append(select, delBtn);
+                card.append(info, actions);
+                container.appendChild(card);
+            });
+        }
+
+        function renderVisitsList(items) {
+            const container = document.getElementById('admin-visits-list');
+            const countEl = document.getElementById('visits-count');
+            if (countEl) countEl.textContent = String(items.length);
+            if (!container) return;
+
+            container.replaceChildren();
+            if (items.length === 0) {
+                const empty = document.createElement('p');
+                empty.className = 'text-xs text-slate-400 py-8 text-center';
+                empty.textContent = 'No campus visits booked yet.';
+                container.appendChild(empty);
+                return;
+            }
+
+            items.forEach((item) => {
+                const card = document.createElement('div');
+                card.className = 'p-4 rounded-2xl bg-navy-950 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4';
+
+                const info = document.createElement('div');
+                info.className = 'space-y-1';
+
+                const title = document.createElement('div');
+                title.className = 'text-sm font-bold text-white';
+                title.textContent = item.visitorName;
+
+                const meta = document.createElement('div');
+                meta.className = 'text-xs text-slate-300';
+                meta.textContent = `Preferred Date: ${item.preferredDate} • ${item.contactNumber}`;
+
+                const time = document.createElement('div');
+                time.className = 'text-[11px] text-slate-500';
+                time.textContent = `Booked: ${formatTimestamp(item.createdAt)}`;
+
+                info.append(title, meta, time);
+
+                const actions = document.createElement('div');
+                actions.className = 'flex items-center gap-2 shrink-0';
+
+                const select = document.createElement('select');
+                select.className = 'bg-navy-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-white';
+                ['scheduled', 'completed', 'cancelled'].forEach((st) => {
+                    const opt = document.createElement('option');
+                    opt.value = st;
+                    opt.textContent = st.charAt(0).toUpperCase() + st.slice(1);
+                    if (item.status === st) opt.selected = true;
+                    select.appendChild(opt);
+                });
+                select.disabled = item.status === 'cancelled';
+                select.addEventListener('change', async () => {
+                    try {
+                        await window.vhsFirebase.updateVisitStatus(item.id, select.value);
+                        openToast(`Visit marked as ${select.value}`);
+                    } catch (err) {
+                        openToast('Failed to update visit status');
+                    }
+                });
+
+                const delBtn = document.createElement('button');
+                delBtn.className = 'px-2.5 py-1.5 rounded-lg bg-rose-500/15 hover:bg-rose-500/30 text-rose-300 text-xs';
+                delBtn.textContent = 'Delete';
+                delBtn.addEventListener('click', async () => {
+                    try {
+                        await window.vhsFirebase.deleteVisit(item.id);
+                        openToast('Visit deleted');
+                    } catch (err) {
+                        openToast('Failed to delete visit');
+                    }
+                });
+
+                actions.append(select, delBtn);
+                card.append(info, actions);
+                container.appendChild(card);
+            });
+        }
+
+        function syncAdminPortalState() {
+            if (!window.vhsFirebase) return;
+            const { isAuthReady, currentUser } = window.vhsFirebase.getAuthState();
+            const authView = document.getElementById('admin-auth-view');
+            const deniedView = document.getElementById('admin-denied-view');
+            const dashView = document.getElementById('admin-dashboard-view');
+            const signOutBtn = document.getElementById('admin-signout-btn');
+            const userLabel = document.getElementById('admin-user-label');
+
+            stopAdminListeners();
+
+            if (!isAuthReady || !currentUser) {
+                authView.classList.remove('hidden');
+                deniedView.classList.add('hidden');
+                dashView.classList.add('hidden');
+                signOutBtn.classList.add('hidden');
+                userLabel.textContent = 'Authorized school staff access';
+                return;
+            }
+
+            authView.classList.add('hidden');
+            deniedView.classList.add('hidden');
+            dashView.classList.remove('hidden');
+            signOutBtn.classList.remove('hidden');
+            userLabel.textContent = `Signed in as ${currentUser.email || 'Staff'}`;
+
+            const onPermError = () => {
+                stopAdminListeners();
+                dashView.classList.add('hidden');
+                deniedView.classList.remove('hidden');
+            };
+
+            unsubInquiries = window.vhsFirebase.subscribeToInquiries(renderInquiriesList, onPermError);
+            unsubVisits = window.vhsFirebase.subscribeToVisits(renderVisitsList, onPermError);
+        }
+
+        async function handleAdminSignIn() {
+            try {
+                await window.vhsFirebase.signInAdmin();
+                syncAdminPortalState();
+            } catch (err) {
+                openToast('Google sign-in cancelled or failed.');
+            }
+        }
+
+        async function handleAdminSignOut() {
+            try {
+                await window.vhsFirebase.signOutAdmin();
+                syncAdminPortalState();
+                openToast('Signed out of Admin Portal');
+            } catch (err) {
+                openToast('Could not sign out');
+            }
+        }
+
+        window.addEventListener('vhs-auth-changed', () => {
+            const modal = document.getElementById('admin-modal');
+            if (modal && !modal.classList.contains('pointer-events-none')) {
+                syncAdminPortalState();
+            }
+        });
 
         // Global Search Modal
         const searchIndex = [
@@ -1493,7 +1889,7 @@
             }
 
             // Close modals/drawer on backdrop click
-            ['admission-modal', 'tour-modal', 'search-modal', 'mobile-drawer'].forEach(id => {
+            ['admission-modal', 'tour-modal', 'search-modal', 'admin-modal', 'mobile-drawer'].forEach(id => {
                 const el = document.getElementById(id);
                 if (!el) return;
                 el.addEventListener('click', (e) => {
@@ -1501,6 +1897,7 @@
                         if (id === 'admission-modal') closeAdmissionModal();
                         if (id === 'tour-modal') closeTourModal();
                         if (id === 'search-modal') toggleSearchModal();
+                        if (id === 'admin-modal') closeAdminModal();
                         if (id === 'mobile-drawer') toggleMobileDrawer();
                     }
                 });
@@ -1512,11 +1909,13 @@
                 const admissionModal = document.getElementById('admission-modal');
                 const tourModal = document.getElementById('tour-modal');
                 const searchModal = document.getElementById('search-modal');
+                const adminModal = document.getElementById('admin-modal');
                 const mobileDrawer = document.getElementById('mobile-drawer');
 
                 if (admissionModal && !admissionModal.classList.contains('pointer-events-none')) closeAdmissionModal();
                 if (tourModal && !tourModal.classList.contains('pointer-events-none')) closeTourModal();
                 if (searchModal && !searchModal.classList.contains('pointer-events-none')) toggleSearchModal();
+                if (adminModal && !adminModal.classList.contains('pointer-events-none')) closeAdminModal();
                 if (mobileDrawer && !mobileDrawer.classList.contains('pointer-events-none')) toggleMobileDrawer();
             });
         };
